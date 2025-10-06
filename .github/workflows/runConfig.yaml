@@ -14,13 +14,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Setup GitHub CLI
-      - name: Setup GitHub CLI
-        uses: cli/gh-action@v2
-
-      - name: Verify gh version
-        run: gh --version
-
       # Setup Go
       - name: Setup Go
         uses: actions/setup-go@v5
@@ -47,7 +40,7 @@ jobs:
             echo "pr_found=false" >> $GITHUB_ENV
           fi
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Run Go program
         if: env.pr_found == 'false'

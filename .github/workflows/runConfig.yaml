@@ -1,0 +1,45 @@
+name: Run Go Program in Main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-go-program:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Install gh
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gh
+
+      - name: Authenticate gh
+        run: |
+          echo "${GITHUB_TOKEN}" | gh auth login --with-token
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check for pending pull requests
+        id: check-pr
+        run: |
+          PR=$(gh pr list --state pending --head secondary --base main --json number)
+          if [ -n "$PR" ]; then
+            echo "Pending pull request found: $PR"
+            echo "pr_found=true" >> $GITHUB_ENV
+          else
+            echo "No pending pull request found"
+            echo "pr_found=false" >> $GITHUB_ENV
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run Go program
+        if: env.pr_found == 'false'
+        run: |
+          go run main.go

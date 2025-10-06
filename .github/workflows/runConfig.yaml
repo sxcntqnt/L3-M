@@ -19,16 +19,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y gh
 
-      - name: Authenticate gh
-        run: |
-          echo "${GITHUB_TOKEN}" | gh auth login --with-token
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Check for pending pull requests
         id: check-pr
         run: |
-          PR=$(gh pr list --state pending --head secondary --base main --json number)
+          PR=$(gh pr list --state open --head secondary --base main --json number --jq '.[0].number')
           if [ -n "$PR" ]; then
             echo "Pending pull request found: $PR"
             echo "pr_found=true" >> $GITHUB_ENV

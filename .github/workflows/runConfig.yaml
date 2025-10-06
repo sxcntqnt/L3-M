@@ -14,19 +14,28 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Setup Go
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.22' # or whichever version you need
+          go-version: '1.22'
 
-      # Initialize module and fetch dependencies
+      - name: Cache Go modules
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/go/pkg/mod
+            ~/.cache/go-build
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
+
       - name: Prepare Go modules
         run: |
           if [ ! -f go.mod ]; then
             go mod init temp
           fi
           go get gopkg.in/yaml.v3
+          go mod tidy   # ensures go.sum is created
 
       - name: Check for pending pull requests
         id: check-pr
@@ -45,3 +54,18 @@ jobs:
       - name: Run Go program
         if: env.pr_found == 'false'
         run: go run diago.go
+
+      - name: Commit and push changes
+        if: env.pr_found == 'false'
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update generated files"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

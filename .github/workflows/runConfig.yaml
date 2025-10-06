@@ -14,10 +14,26 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install gh
+      # Setup GitHub CLI
+      - name: Setup GitHub CLI
+        uses: cli/gh-action@v2
+
+      - name: Verify gh version
+        run: gh --version
+
+      # Setup Go
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22' # or whichever version you need
+
+      # Initialize module and fetch dependencies
+      - name: Prepare Go modules
         run: |
-          sudo apt-get update
-          sudo apt-get install -y gh
+          if [ ! -f go.mod ]; then
+            go mod init temp
+          fi
+          go get gopkg.in/yaml.v3
 
       - name: Check for pending pull requests
         id: check-pr
@@ -35,5 +51,4 @@ jobs:
 
       - name: Run Go program
         if: env.pr_found == 'false'
-        run: |
-          go run diago.go
+        run: go run diago.go

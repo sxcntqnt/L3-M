@@ -37,7 +37,7 @@ jobs:
 
       - name: Run Diago program
         run: |
-          go run diago.go --bookies-file=bookies.txt --output-dir=EMC
+          go run main.go  --mode=fetch --bookies-file=bookies.txt --output-dir=EMC
 
       - name: Check for changes in EMC/
         id: emc_changes

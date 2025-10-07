@@ -48,7 +48,7 @@ jobs:
 
       - name: Run Diago (generate & fetch)
         run: |
-          go run main.go --bookies-file=bookies.txt --output-dir=EMC
+          go run main.go --mode=auto  --bookies-file=bookies.txt --output-dir=EMC
 
       - name: Create latest report snippet
         run: |

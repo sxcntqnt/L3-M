@@ -1,0 +1,6 @@
+bet365,https://www.bet365.com
+onexbet,https://1xbet.com
+betway,https://www.betway.co.ke
+sportpesa,https://www.sportpesa.com
+williamhill,https://sports.williamhill.com
+

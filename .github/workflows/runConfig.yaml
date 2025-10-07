@@ -1,19 +1,18 @@
-name: Run Go Program in Main
+name: Run Diago Verification
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:   
-
+  workflow_dispatch:
   schedule:
-    - cron: '0 0 * * 0' 
+    - cron: '0 0 * * 0'  # Weekly run Sunday midnight UTC
 
 permissions:
   contents: write
 
 jobs:
-  run-go-program:
+  run-diago:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -39,40 +38,76 @@ jobs:
       - name: Prepare Go modules
         run: |
           if [ ! -f go.mod ]; then
-            go mod init temp
+            go mod init diago
           fi
           go get gopkg.in/yaml.v3
-          go mod tidy   # ensures go.sum is created
+          go mod tidy
 
-      - name: Check for pending pull requests
-        id: check-pr
+      - name: Ensure output directory exists
+        run: mkdir -p EMC
+
+      - name: Run Diago (generate & fetch)
         run: |
-          PR=$(gh pr list --state open --head secondary --base main --json number --jq '.[0].number')
-          if [ -n "$PR" ]; then
-            echo "Pending pull request found: $PR"
-            echo "pr_found=true" >> $GITHUB_ENV
-          else
-            echo "No pending pull request found"
-            echo "pr_found=false" >> $GITHUB_ENV
-          fi
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          go run main.go --bookies-file=bookies.txt --output-dir=EMC
 
-      - name: Run Go program
-        if: env.pr_found == 'false'
-        run: go run diago.go
+      - name: Create latest report snippet
+        run: |
+          awk '/## 📊 Summary/,0' EMC/report.md > EMC/latest_report.md
+          echo "" >> EMC/latest_report.md
+          echo "_Updated automatically via GitHub Actions_" >> EMC/latest_report.md
 
-      - name: Commit and push changes
-        if: env.pr_found == 'false'
+      - name: Commit updated configs and reports
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
+          git add EMC/**/*.yaml EMC/**/*.json EMC/**/*.md
           if ! git diff --cached --quiet; then
-            git commit -m "chore: update generated files"
+            git commit -m "chore: update generated configs and bookie reports"
             git push
           else
-            echo "No changes to commit"
-          fi
+            echo "✅ No changes to commit"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish latest report to Wiki with history
+        run: |
+          WIKI_REPO="${GITHUB_REPOSITORY}.wiki.git"
+          TMP_WIKI=$(mktemp -d)
+          TIMESTAMP=$(date +'%Y-%m-%d_%H-%M')
+
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${WIKI_REPO} $TMP_WIKI
+
+          awk '/## 📊 Summary/,0' EMC/report.md > $TMP_WIKI/Latest_Report.md
+          echo "" >> $TMP_WIKI/Latest_Report.md
+          echo "_Updated automatically via GitHub Actions_" >> $TMP_WIKI/Latest_Report.md
+
+          mkdir -p $TMP_WIKI/history/$TIMESTAMP
+          cp EMC/report.md EMC/report.json $TMP_WIKI/history/$TIMESTAMP/
+
+          HOME_FILE="$TMP_WIKI/Home.md"
+          echo "# Bookie Reports Dashboard" > $HOME_FILE
+          echo "" >> $HOME_FILE
+          echo "## Latest Report" >> $HOME_FILE
+          echo "- [Latest Report](Latest_Report.md)" >> $HOME_FILE
+          echo "" >> $HOME_FILE
+          echo "## Historical Reports" >> $HOME_FILE
+
+          for report_dir in $(ls -1 $TMP_WIKI/history | sort -r); do
+            echo "- [$report_dir](history/$report_dir/report.md)" >> $HOME_FILE
+          done
+
+          echo "" >> $HOME_FILE
+          echo "_Updated automatically via GitHub Actions_" >> $HOME_FILE
+
+          cd $TMP_WIKI
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add Latest_Report.md history/$TIMESTAMP Home.md
+          if git diff --cached --quiet; then
+            echo "No changes for Wiki"
+          else
+            git commit -m "Update latest report + history - $TIMESTAMP"
+            git push
+          fi
+

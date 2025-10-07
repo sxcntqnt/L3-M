@@ -1,0 +1,18 @@
+Bet365:
+  Username: "bet365user"
+  Password: "supersecret"
+  Selectors:
+    Login:
+      UsernameInput: "input#login-username"
+      PasswordInput: "input#login-password"
+      LoginButton: "button#login-submit"
+
+OneXBet:
+  Username: "1xbetuser"
+  Password: "anotherpass"
+  Selectors:
+    Login:
+      UsernameInput: "input#user"
+      PasswordInput: "input#pass"
+      LoginButton: "button#submit-login"
+

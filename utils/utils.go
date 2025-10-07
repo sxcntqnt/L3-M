@@ -51,7 +51,7 @@ func AllRegistered() []Bookie {
 // Enabled Bookies (from bookies.txt)
 // ---------------------------
 
-// EnabledBookies parses bookies.txt (name,url), skips blank lines & comments
+// EnabledBookies parses bookies.txt (name,url), skips commented lines
 func EnabledBookies(filename string) ([]Bookie, error) {
     file, err := os.Open(filename)
     if err != nil {
@@ -68,7 +68,8 @@ func EnabledBookies(filename string) ([]Bookie, error) {
             continue // skip blank lines & comments
         }
 
-        parts := strings.Split(line, ",")
+        // Split by first comma
+        parts := strings.SplitN(line, ",", 2)
         if len(parts) < 2 {
             fmt.Printf("⚠️ Invalid line in %s (need 'name,url'): %s\n", filename, line)
             continue
@@ -78,7 +79,7 @@ func EnabledBookies(filename string) ([]Bookie, error) {
         url := strings.TrimSpace(parts[1])
 
         if b, ok := registry[name]; ok {
-            b.SetURL(url)        // inject URL from config
+            b.SetURL(url) // inject URL from bookies.txt
             enabled = append(enabled, b)
         } else {
             fmt.Printf("⚠️ Bookie '%s' listed in %s but not registered in code\n", name, filename)

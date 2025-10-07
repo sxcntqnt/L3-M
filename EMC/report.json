@@ -38,15 +38,11 @@
       "url": "https://www.inbetkenya.co.ke/index.php?action=sport\u0026tz=3.0\u0026set_default_tz=1%!(EXTRA string=inbetkenya)",
       "results": [
         {
-          "label": "Moneyline",
+          "label": "SportDropdown",
           "status": "❌"
         },
         {
-          "label": "Spread",
-          "status": "❌"
-        },
-        {
-          "label": "BetHistory",
+          "label": "Totals",
           "status": "❌"
         },
         {
@@ -66,11 +62,19 @@
           "status": "❌"
         },
         {
-          "label": "SportDropdown",
+          "label": "DatePicker",
           "status": "❌"
         },
         {
-          "label": "Totals",
+          "label": "SearchButton",
+          "status": "❌"
+        },
+        {
+          "label": "Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "Spread",
           "status": "❌"
         },
         {
@@ -78,15 +82,11 @@
           "status": "❌"
         },
         {
+          "label": "BetHistory",
+          "status": "❌"
+        },
+        {
           "label": "LoginButton",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
           "status": "❌"
         }
       ],
@@ -176,15 +176,11 @@
       "url": "https://www.inbetkenya.co.ke/index.php?action=sport\u0026tz=3.0\u0026set_default_tz=1%!(EXTRA string=inbetkenya)",
       "results": [
         {
-          "label": "Moneyline",
+          "label": "SportDropdown",
           "status": "❌"
         },
         {
-          "label": "Spread",
-          "status": "❌"
-        },
-        {
-          "label": "BetHistory",
+          "label": "Totals",
           "status": "❌"
         },
         {
@@ -204,11 +200,19 @@
           "status": "❌"
         },
         {
-          "label": "SportDropdown",
+          "label": "DatePicker",
           "status": "❌"
         },
         {
-          "label": "Totals",
+          "label": "SearchButton",
+          "status": "❌"
+        },
+        {
+          "label": "Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "Spread",
           "status": "❌"
         },
         {
@@ -216,15 +220,11 @@
           "status": "❌"
         },
         {
+          "label": "BetHistory",
+          "status": "❌"
+        },
+        {
           "label": "LoginButton",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
           "status": "❌"
         }
       ],

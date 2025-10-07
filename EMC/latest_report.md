@@ -25,19 +25,19 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## inbetkenya (https://www.inbetkenya.co.ke/index.php?action=sport&tz=3.0&set_default_tz=1%!(EXTRA string=inbetkenya))
-- Moneyline: ❌
-- Spread: ❌
-- BetHistory: ❌
+- SportDropdown: ❌
+- Totals: ❌
 - LiveEvent: ❌
 - InPlayBetBtn: ❌
 - UsernameInput: ❌
 - PasswordInput: ❌
-- SportDropdown: ❌
-- Totals: ❌
-- BetButton: ❌
-- LoginButton: ❌
 - DatePicker: ❌
 - SearchButton: ❌
+- Moneyline: ❌
+- Spread: ❌
+- BetButton: ❌
+- BetHistory: ❌
+- LoginButton: ❌
 Overall: ❌ Failed
 
 ## ligibet (https://www.ligibet.com%!(EXTRA string=ligibet))

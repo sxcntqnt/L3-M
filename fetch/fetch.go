@@ -3,29 +3,58 @@ package fetch
 import (
 	"fmt"
 	"sync"
+        "time"
 
 	"diago/config"
 	"diago/report"
 
 	"github.com/PuerkitoBio/goquery"
 	"net/http"
+	"net/url"
 )
 
 // FetchPage fetches the page and returns a goquery document
-func FetchPage(url string) (*goquery.Document, error) {
-	resp, err := http.Get(url)
-	if err != nil {
-		return nil, fmt.Errorf("failed to fetch %s: %w", url, err)
-	}
-	defer resp.Body.Close()
+// FetchPage fetches the page from the given URL and returns a goquery document.
+func FetchPage(urlStr string) (*goquery.Document, error) {
+    // Parse and clean URL
+    parsedURL, err := url.Parse(urlStr)
+    if err != nil {
+        return nil, fmt.Errorf("failed to parse URL %q: %w", urlStr, err)
+    }
+    parsedURL.Fragment = ""
 
-	doc, err := goquery.NewDocumentFromReader(resp.Body)
-	if err != nil {
-		return nil, fmt.Errorf("failed to parse %s: %w", url, err)
-	}
-	return doc, nil
+    // Custom HTTP client with timeout
+    client := &http.Client{
+        Timeout: 10 * time.Second,
+    }
+
+    // Create HTTP request with headers (some sites require a user-agent)
+    req, err := http.NewRequest("GET", parsedURL.String(), nil)
+    if err != nil {
+        return nil, fmt.Errorf("failed to create request for %q: %w", parsedURL.String(), err)
+    }
+    req.Header.Set("User-Agent", "Mozilla/5.0 (compatible; FetchBot/1.0; +https://yourdomain.com/bot)")
+
+    // Execute the request
+    resp, err := client.Do(req)
+    if err != nil {
+        return nil, fmt.Errorf("failed to fetch %q: %w", parsedURL.String(), err)
+    }
+    defer resp.Body.Close()
+
+    // Check for HTTP errors
+    if resp.StatusCode < 200 || resp.StatusCode >= 300 {
+        return nil, fmt.Errorf("received HTTP %d for %q", resp.StatusCode, parsedURL.String())
+    }
+
+    // Parse the response body into a goquery document
+    doc, err := goquery.NewDocumentFromReader(resp.Body)
+    if err != nil {
+        return nil, fmt.Errorf("failed to parse response from %q: %w", parsedURL.String(), err)
+    }
+
+    return doc, nil
 }
-
 // VerifyBookieWithConfig checks all selectors from a config.Sportsbook
 func VerifyBookieWithConfig(name, url string, cfg *config.Sportsbook) report.BookieReport {
 	fmt.Printf("🔍 Checking %s at %s...\n", name, url)
@@ -108,4 +137,3 @@ func VerifyBookiesConcurrently(bookies []*config.Sportsbook) report.FullReport {
 		Details: details,
 	}
 }
-

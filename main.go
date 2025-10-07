@@ -86,11 +86,25 @@ func configsMissing(bookies []string, outputDir string) bool {
 }
 
 func generateConfigs(bookies []string, overrides config.OverrideMap, outputDir string) {
-	fmt.Println("🛠️ Generating configs...")
-	if err := config.GenerateConfigs(bookies, overrides, outputDir, "https://%s.example.com", "/usr/bin/chrome"); err != nil {
-		fmt.Printf("❌ Error generating configs: %v\n", err)
-		os.Exit(1)
-	}
+    fmt.Println("🛠️ Generating configs... ")
+    for _, b := range bookies {
+        // Sanitize folder name: use only the bookie name
+        folderName := strings.ToLower(b)
+        folderPath := filepath.Join(outputDir, folderName)
+        if err := os.MkdirAll(folderPath, 0755); err != nil {
+            fmt.Printf("❌ Failed to create folder %s: %v\n", folderPath, err)
+            continue
+        }
+
+        // Generate the config
+        err := config.GenerateConfigs([]string{b}, overrides, outputDir, "https://%s.example.com", "/usr/bin/chrome")
+        if err != nil {
+            fmt.Printf("❌ Error generating config for %s: %v\n", b, err)
+            continue
+        }
+
+        fmt.Printf("✅ Updated config for %s at %s/%s/config.yaml\n", b, outputDir, folderName)
+    }
 }
 
 // fetchConfigs now returns the full report

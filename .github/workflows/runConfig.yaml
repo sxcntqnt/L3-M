@@ -66,6 +66,7 @@ jobs:
             git push
           else
             echo "✅ No changes to commit"
+          fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -110,4 +111,3 @@ jobs:
             git commit -m "Update latest report + history - $TIMESTAMP"
             git push
           fi
-

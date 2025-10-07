@@ -1,0 +1,24 @@
+name: inbetkenya
+base_url: https://www.inbetkenya.co.ke/index.php?action=sport&tz=3.0&set_default_tz=1%!(EXTRA string=inbetkenya)
+browser_path: /usr/bin/chrome
+username: user1
+password: pass1
+region: KE
+selectors:
+  login:
+    username_input: input#username
+    password_input: input#password
+    login_button: button#login
+  event_search:
+    sport_dropdown: select#sport
+    date_picker: input#date
+    search_button: button#search
+  odds_selector:
+    moneyline: div.moneyline
+    spread: div.spread
+    totals: div.totals
+bet_button: button#placeBet
+bet_history: div#betHistory
+live_betting:
+  live_event: div.live-event
+  in_play_bet_button: button#inPlayBet

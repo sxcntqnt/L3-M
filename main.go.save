@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"flag"
 	"fmt"
 	"os"
@@ -10,9 +11,8 @@ import (
 	"diago/config"
 	"diago/fetch"
 	"diago/report"
-	"diago/utils"
 
-	_ "diago/bookies"
+        _ "diago/bookies" 
 	"gopkg.in/yaml.v3"
 )
 
@@ -22,10 +22,9 @@ func main() {
 	outputDir := flag.String("output-dir", "EMC", "Output directory")
 	flag.Parse()
 
-	// Load enabled bookies from bookies.txt
-	enabledBookies, err := utils.EnabledBookies(*bookiesFile)
+	bookiesList, err := loadBookies(*bookiesFile)
 	if err != nil {
-		fmt.Printf("❌ Failed to load bookies: %v\n", err)
+		fmt.Printf("❌ Failed to read bookies file: %v\n", err)
 		os.Exit(1)
 	}
 
@@ -39,16 +38,16 @@ func main() {
 
 	switch *mode {
 	case "generate":
-		generateConfigs(enabledBookies, overrides, *outputDir)
+		generateConfigs(bookiesList, overrides, *outputDir)
 	case "fetch":
-		fullReport := fetchConfigs(enabledBookies, *outputDir)
+		fullReport := fetchConfigs(bookiesList, *outputDir)
 		createLatestSnippet(fullReport, *outputDir)
 	case "auto":
-		if configsMissing(enabledBookies, *outputDir) {
+		if configsMissing(bookiesList, *outputDir) {
 			fmt.Println("🛠️ Configs missing – generating first...")
-			generateConfigs(enabledBookies, overrides, *outputDir)
+			generateConfigs(bookiesList, overrides, *outputDir)
 		}
-		fullReport := fetchConfigs(enabledBookies, *outputDir)
+		fullReport := fetchConfigs(bookiesList, *outputDir)
 		createLatestSnippet(fullReport, *outputDir)
 	default:
 		fmt.Printf("❌ Unknown mode: %s\n", *mode)
@@ -56,10 +55,20 @@ func main() {
 	}
 }
 
-// configsMissing checks if any bookie's config.yaml is missing
-func configsMissing(bookies []utils.Bookie, outputDir string) bool {
+	for scanner.Scan() {
+		line := strings.TrimSpace(scanner.Text())
+		if line == "" || strings.HasPrefix(line, "#") {
+			continue
+		}
+		parts := strings.Fields(line)
+		bookies = append(bookies, parts[0])
+	}
+	return bookies, scanner.Err()
+}
+
+func configsMissing(bookies []string, outputDir string) bool {
 	for _, b := range bookies {
-		cfgPath := filepath.Join(outputDir, strings.ToLower(b.Name()), "config.yaml")
+		cfgPath := filepath.Join(outputDir, strings.ToLower(b), "config.yaml")
 		if _, err := os.Stat(cfgPath); os.IsNotExist(err) {
 			return true
 		}
@@ -67,41 +76,40 @@ func configsMissing(bookies []utils.Bookie, outputDir string) bool {
 	return false
 }
 
-// generateConfigs writes config files for all bookies
-func generateConfigs(bookies []utils.Bookie, overrides config.OverrideMap, outputDir string) {
-	fmt.Println("🛠️ Generating configs...")
+func generateConfigs(bookies []string, overrides config.OverrideMap, outputDir string) {
+    fmt.Println("🛠️ Generating configs... ")
+    for _, b := range bookies {
+        // Sanitize folder name: use only the bookie name
+        folderName := strings.ToLower(b)
+        folderPath := filepath.Join(outputDir, folderName)
+        if err := os.MkdirAll(folderPath, 0755); err != nil {
+            fmt.Printf("❌ Failed to create folder %s: %v\n", folderPath, err)
+            continue
+        }
 
-	for _, b := range bookies {
-		folderName := strings.ToLower(b.Name())
-		folderPath := filepath.Join(outputDir, folderName)
-		if err := os.MkdirAll(folderPath, 0755); err != nil {
-			fmt.Printf("❌ Failed to create folder %s: %v\n", folderPath, err)
-			continue
-		}
+        // Generate the config
+        err := config.GenerateConfigs([]string{b}, overrides, outputDir, "https://%s.example.com", "/usr/bin/chrome")
+        if err != nil {
+            fmt.Printf("❌ Error generating config for %s: %v\n", b, err)
+            continue
+        }
 
-		// Generate the config using the proper URL from utils.Bookie
-		err := config.GenerateConfigs([]string{b.Name()}, overrides, outputDir, b.URL(), "/usr/bin/chrome")
-		if err != nil {
-			fmt.Printf("❌ Error generating config for %s: %v\n", b.Name(), err)
-			continue
-		}
-
-		fmt.Printf("✅ Updated config for %s at %s/%s/config.yaml\n", b.Name(), outputDir, folderName)
-	}
+        fmt.Printf("✅ Updated config for %s at %s/%s/config.yaml\n", b, outputDir, folderName)
+    }
 }
 
-// fetchConfigs fetches all bookies and returns the full report
-func fetchConfigs(bookies []utils.Bookie, outputDir string) report.FullReport {
+// fetchConfigs now returns the full report
+func fetchConfigs(bookies []string, outputDir string) report.FullReport {
 	fmt.Println("🌐 Fetching and verifying bookies...")
 
 	var summary []report.BookieReport
 	var details []report.BookieReport
 
 	for _, b := range bookies {
-		cfgPath := filepath.Join(outputDir, strings.ToLower(b.Name()), "config.yaml")
+		cfgPath := filepath.Join(outputDir, strings.ToLower(b), "config.yaml")
 		cfg, err := loadConfig(cfgPath)
 		if err != nil {
-			fmt.Printf("⚠️ Skipping %s, failed to load config: %v\n", b.Name(), err)
+			fmt.Printf("⚠️ Skipping %s, failed to load config: %v\n", b, err)
 			continue
 		}
 
@@ -130,7 +138,7 @@ func fetchConfigs(bookies []utils.Bookie, outputDir string) report.FullReport {
 	return fullReport
 }
 
-// createLatestSnippet generates latest_report.md from full report
+// createLatestSnippet now builds it from FullReport in memory
 func createLatestSnippet(fullReport report.FullReport, outputDir string) {
 	latestMD := filepath.Join(outputDir, "latest_report.md")
 
@@ -156,7 +164,6 @@ func createLatestSnippet(fullReport report.FullReport, outputDir string) {
 	fmt.Printf("✅ Created latest report snippet: %s\n", latestMD)
 }
 
-// loadConfig reads a YAML config for a single bookie
 func loadConfig(path string) (*config.Sportsbook, error) {
 	data, err := os.ReadFile(path)
 	if err != nil {

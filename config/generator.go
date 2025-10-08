@@ -21,7 +21,7 @@ func GenerateConfigs(bookies []string, overrides OverrideMap, outputDir, baseURL
 
 		sb := Sportsbook{
 			Name:        bookie,
-			BaseURL:     fmt.Sprintf(baseURL, strings.ToLower(bookie)),
+			BaseURL:     baseURL,
 			BrowserPath: browserPath,
 			Username:    fmt.Sprintf("user%d", i+1),
 			Password:    fmt.Sprintf("pass%d", i+1),

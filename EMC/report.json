@@ -1,0 +1,182 @@
+{
+  "summary": [
+    {
+      "name": "betgr8",
+      "url": "\"https://lite.betgr8.com/ke/?force=1#/\"",
+      "results": [
+        {
+          "label": "Fetch error",
+          "status": "failed to parse URL \"\\\"https://lite.betgr8.com/ke/?force=1#/\\\"\": parse \"\\\"https://lite.betgr8.com/ke/?force=1\": first path segment in URL cannot contain colon"
+        }
+      ],
+      "all_pass": false
+    },
+    {
+      "name": "betway",
+      "url": "\"https://www.betway.com\"",
+      "results": [
+        {
+          "label": "Fetch error",
+          "status": "failed to parse URL \"\\\"https://www.betway.com\\\"\": parse \"\\\"https://www.betway.com\\\"\": first path segment in URL cannot contain colon"
+        }
+      ],
+      "all_pass": false
+    },
+    {
+      "name": "dimbakenya",
+      "url": "\"https://www.dimbakenya.com/\"",
+      "results": [
+        {
+          "label": "Fetch error",
+          "status": "failed to parse URL \"\\\"https://www.dimbakenya.com/\\\"\": parse \"\\\"https://www.dimbakenya.com/\\\"\": first path segment in URL cannot contain colon"
+        }
+      ],
+      "all_pass": false
+    },
+    {
+      "name": "inbetkenya",
+      "url": "\"https://www.inbetkenya.co.ke/index.php?action=sport\u0026tz=3.0\u0026set_default_tz=1\"",
+      "results": [
+        {
+          "label": "Fetch error",
+          "status": "failed to parse URL \"\\\"https://www.inbetkenya.co.ke/index.php?action=sport\u0026tz=3.0\u0026set_default_tz=1\\\"\": parse \"\\\"https://www.inbetkenya.co.ke/index.php?action=sport\u0026tz=3.0\u0026set_default_tz=1\\\"\": first path segment in URL cannot contain colon"
+        }
+      ],
+      "all_pass": false
+    },
+    {
+      "name": "ligibet",
+      "url": "\"https://www.ligibet.com\"",
+      "results": [
+        {
+          "label": "Fetch error",
+          "status": "failed to parse URL \"\\\"https://www.ligibet.com\\\"\": parse \"\\\"https://www.ligibet.com\\\"\": first path segment in URL cannot contain colon"
+        }
+      ],
+      "all_pass": false
+    },
+    {
+      "name": "parimatch",
+      "url": "\"https://www.parimatch.com\"",
+      "results": [
+        {
+          "label": "Fetch error",
+          "status": "failed to parse URL \"\\\"https://www.parimatch.com\\\"\": parse \"\\\"https://www.parimatch.com\\\"\": first path segment in URL cannot contain colon"
+        }
+      ],
+      "all_pass": false
+    },
+    {
+      "name": "saharagames",
+      "url": "\"https://m-ke.saharagames.com/en\"",
+      "results": [
+        {
+          "label": "Fetch error",
+          "status": "failed to parse URL \"\\\"https://m-ke.saharagames.com/en\\\"\": parse \"\\\"https://m-ke.saharagames.com/en\\\"\": first path segment in URL cannot contain colon"
+        }
+      ],
+      "all_pass": false
+    },
+    {
+      "name": "sportybet",
+      "url": "\"https://www.sportybet.com/int/sport/football/live_list\"",
+      "results": [
+        {
+          "label": "Fetch error",
+          "status": "failed to parse URL \"\\\"https://www.sportybet.com/int/sport/football/live_list\\\"\": parse \"\\\"https://www.sportybet.com/int/sport/football/live_list\\\"\": first path segment in URL cannot contain colon"
+        }
+      ],
+      "all_pass": false
+    }
+  ],
+  "details": [
+    {
+      "name": "betgr8",
+      "url": "\"https://lite.betgr8.com/ke/?force=1#/\"",
+      "results": [
+        {
+          "label": "Fetch error",
+          "status": "failed to parse URL \"\\\"https://lite.betgr8.com/ke/?force=1#/\\\"\": parse \"\\\"https://lite.betgr8.com/ke/?force=1\": first path segment in URL cannot contain colon"
+        }
+      ],
+      "all_pass": false
+    },
+    {
+      "name": "betway",
+      "url": "\"https://www.betway.com\"",
+      "results": [
+        {
+          "label": "Fetch error",
+          "status": "failed to parse URL \"\\\"https://www.betway.com\\\"\": parse \"\\\"https://www.betway.com\\\"\": first path segment in URL cannot contain colon"
+        }
+      ],
+      "all_pass": false
+    },
+    {
+      "name": "dimbakenya",
+      "url": "\"https://www.dimbakenya.com/\"",
+      "results": [
+        {
+          "label": "Fetch error",
+          "status": "failed to parse URL \"\\\"https://www.dimbakenya.com/\\\"\": parse \"\\\"https://www.dimbakenya.com/\\\"\": first path segment in URL cannot contain colon"
+        }
+      ],
+      "all_pass": false
+    },
+    {
+      "name": "inbetkenya",
+      "url": "\"https://www.inbetkenya.co.ke/index.php?action=sport\u0026tz=3.0\u0026set_default_tz=1\"",
+      "results": [
+        {
+          "label": "Fetch error",
+          "status": "failed to parse URL \"\\\"https://www.inbetkenya.co.ke/index.php?action=sport\u0026tz=3.0\u0026set_default_tz=1\\\"\": parse \"\\\"https://www.inbetkenya.co.ke/index.php?action=sport\u0026tz=3.0\u0026set_default_tz=1\\\"\": first path segment in URL cannot contain colon"
+        }
+      ],
+      "all_pass": false
+    },
+    {
+      "name": "ligibet",
+      "url": "\"https://www.ligibet.com\"",
+      "results": [
+        {
+          "label": "Fetch error",
+          "status": "failed to parse URL \"\\\"https://www.ligibet.com\\\"\": parse \"\\\"https://www.ligibet.com\\\"\": first path segment in URL cannot contain colon"
+        }
+      ],
+      "all_pass": false
+    },
+    {
+      "name": "parimatch",
+      "url": "\"https://www.parimatch.com\"",
+      "results": [
+        {
+          "label": "Fetch error",
+          "status": "failed to parse URL \"\\\"https://www.parimatch.com\\\"\": parse \"\\\"https://www.parimatch.com\\\"\": first path segment in URL cannot contain colon"
+        }
+      ],
+      "all_pass": false
+    },
+    {
+      "name": "saharagames",
+      "url": "\"https://m-ke.saharagames.com/en\"",
+      "results": [
+        {
+          "label": "Fetch error",
+          "status": "failed to parse URL \"\\\"https://m-ke.saharagames.com/en\\\"\": parse \"\\\"https://m-ke.saharagames.com/en\\\"\": first path segment in URL cannot contain colon"
+        }
+      ],
+      "all_pass": false
+    },
+    {
+      "name": "sportybet",
+      "url": "\"https://www.sportybet.com/int/sport/football/live_list\"",
+      "results": [
+        {
+          "label": "Fetch error",
+          "status": "failed to parse URL \"\\\"https://www.sportybet.com/int/sport/football/live_list\\\"\": parse \"\\\"https://www.sportybet.com/int/sport/football/live_list\\\"\": first path segment in URL cannot contain colon"
+        }
+      ],
+      "all_pass": false
+    }
+  ]
+}

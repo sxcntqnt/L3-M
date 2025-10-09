@@ -1,11 +1,11 @@
-name: Update Configs & Publish Report
+name: Update Configs
 
 on:
   push:
     branches:
       - secondary
   schedule:
-    - cron: "0 1 * * *"   # run daily at 01:00 UTC
+    - cron: "0 1 * * *"  # 📅 Runs daily at 01:00 UTC
   workflow_dispatch:
 
 permissions:
@@ -16,23 +16,23 @@ jobs:
   update-configs:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout code 🛎️
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Checkout secondary branch
+      - name: Ensure we're on the secondary branch 🌿
         run: |
-          git fetch origin  # Fetch all remote branches
-          git checkout secondary || git checkout -b secondary origin/secondary  # Checkout 'secondary' branch, create if it doesn't exist locally
+          git fetch origin secondary
+          git switch secondary || git switch -c secondary origin/secondary
 
-      - name: Setup Go
+      - name: Setup Go 🛠️
         uses: actions/setup-go@v5
         with:
           go-version: '1.22'
 
-      - name: Prepare Go modules
+      - name: Prepare Go modules 📦
         run: |
           if [ ! -f go.mod ]; then
             go mod init temp
@@ -40,16 +40,24 @@ jobs:
           go get gopkg.in/yaml.v3
           go mod tidy
 
-      - name: Run Diago program
-        run: |
-          go run main.go  --mode=fetch --bookies-file=bookies.txt --output-dir=EMC
+      - name: Ensure output directory exists 📁
+        run: mkdir -p EMC
 
-      - name: Check for changes in EMC/
+      - name: Run Diago 🚀
+        run: |
+          if [ ! -d "EMC" ] || [ -z "$(ls -A EMC)" ]; then
+            echo "📁 EMC directory missing or empty – running in auto mode"
+            go run main.go --mode=auto --bookies-file=bookies.txt --output-dir=EMC
+          else
+            echo "📁 EMC directory found – running in fetch mode with baking"
+            go run main.go --mode=fetch --bookies-file=bookies.txt --output-dir=EMC --bake-overrides
+          fi
+
+      - name: Check for changes in EMC/ 🔍
         id: emc_changes
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-
           git add EMC/
           if git diff --cached --quiet; then
             echo "changes=false" >> $GITHUB_ENV
@@ -59,7 +67,7 @@ jobs:
             echo "changes=true" >> $GITHUB_ENV
           fi
 
-      - name: Create pull request
+      - name: Create pull request 📬
         if: env.changes == 'true'
         id: cpr
         uses: peter-evans/create-pull-request@v5
@@ -70,10 +78,10 @@ jobs:
           base: main
           head: secondary
 
-      - name: Add PR comment with diff
+      - name: Add PR comment with diff 💬
         if: steps.cpr.outputs.pull-request-number
         run: |
-          echo "### EMC Config & Report changes" > pr_comment.md
+          echo "### EMC Config & Report Changes" > pr_comment.md
           echo "" >> pr_comment.md
           echo "\`\`\`diff" >> pr_comment.md
           git diff HEAD^ HEAD EMC/ >> pr_comment.md
@@ -84,45 +92,9 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Publish latest report to Wiki with history
-        run: |
-          WIKI_REPO="${GITHUB_REPOSITORY}.wiki.git"
-          TMP_WIKI=$(mktemp -d)
-          TIMESTAMP=$(date +'%Y-%m-%d_%H-%M')
-
-          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${WIKI_REPO} $TMP_WIKI
-
-          awk '/## 📊 Summary/,0' EMC/report.md > $TMP_WIKI/Latest_Report.md
-          echo "" >> $TMP_WIKI/Latest_Report.md
-          echo "_Updated automatically via GitHub Actions_" >> $TMP_WIKI/Latest_Report.md
-
-          mkdir -p $TMP_WIKI/history/$TIMESTAMP
-          cp EMC/report.md EMC/report.json $TMP_WIKI/history/$TIMESTAMP/
-
-          HOME_FILE="$TMP_WIKI/Home.md"
-          echo "# Bookie Reports Dashboard" > $HOME_FILE
-          echo "" >> $HOME_FILE
-          echo "## Latest Report" >> $HOME_FILE
-          echo "- [Latest Report](Latest_Report.md)" >> $HOME_FILE
-          echo "" >> $HOME_FILE
-          echo "## Historical Reports" >> $HOME_FILE
-
-          for report_dir in $(ls -1 $TMP_WIKI/history | sort -r); do
-            echo "- [$report_dir](history/$report_dir/report.md)" >> $HOME_FILE
-          done
-
-          echo "" >> $HOME_FILE
-          echo "_Updated automatically via GitHub Actions_" >> $HOME_FILE
-
-          cd $TMP_WIKI
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add Latest_Report.md history/$TIMESTAMP Home.md
-          if git diff --cached --quiet; then
-            echo "No changes for Wiki"
-          else
-            git commit -m "Update latest report + history - $TIMESTAMP"
-            git push
-          fi
+      - name: Publish report to Wiki 📚
+        uses: ./.github/actions/publish-wiki
+        with:
+          output-dir: EMC
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 

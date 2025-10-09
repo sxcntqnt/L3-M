@@ -22,6 +22,11 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Checkout secondary branch
+        run: |
+          git fetch origin  # Fetch all remote branches
+          git checkout secondary || git checkout -b secondary origin/secondary  # Checkout 'secondary' branch, create if it doesn't exist locally
+
       - name: Setup Go
         uses: actions/setup-go@v5
         with:

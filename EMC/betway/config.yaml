@@ -1,5 +1,5 @@
 name: betway
-base_url: https://www.betway.com%!(EXTRA string=betway)
+base_url: '"https://www.betway.com"'
 browser_path: /usr/bin/chrome
 username: user1
 password: pass1

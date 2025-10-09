@@ -1,5 +1,5 @@
 name: parimatch
-base_url: https://www.parimatch.com%!(EXTRA string=parimatch)
+base_url: '"https://www.parimatch.com"'
 browser_path: /usr/bin/chrome
 username: user1
 password: pass1

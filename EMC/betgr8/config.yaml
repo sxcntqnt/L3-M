@@ -1,5 +1,5 @@
 name: betgr8
-base_url: https://lite.betgr8.com/ke/?force=1#/%!(EXTRA string=betgr8)
+base_url: '"https://lite.betgr8.com/ke/?force=1#/"'
 browser_path: /usr/bin/chrome
 username: user1
 password: pass1

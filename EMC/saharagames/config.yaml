@@ -1,5 +1,5 @@
 name: saharagames
-base_url: https://m-ke.saharagames.com/en%!(EXTRA string=saharagames)
+base_url: '"https://m-ke.saharagames.com/en"'
 browser_path: /usr/bin/chrome
 username: user1
 password: pass1

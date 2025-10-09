@@ -1,5 +1,5 @@
 name: inbetkenya
-base_url: https://www.inbetkenya.co.ke/index.php?action=sport&tz=3.0&set_default_tz=1%!(EXTRA string=inbetkenya)
+base_url: '"https://www.inbetkenya.co.ke/index.php?action=sport&tz=3.0&set_default_tz=1"'
 browser_path: /usr/bin/chrome
 username: user1
 password: pass1

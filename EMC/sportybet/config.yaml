@@ -1,5 +1,5 @@
 name: sportybet
-base_url: https://www.sportybet.com/int/sport/football/live_list%!(EXTRA string=sportybet)
+base_url: '"https://www.sportybet.com/int/sport/football/live_list"'
 browser_path: /usr/bin/chrome
 username: user1
 password: pass1

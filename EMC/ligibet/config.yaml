@@ -1,5 +1,5 @@
 name: ligibet
-base_url: https://www.ligibet.com%!(EXTRA string=ligibet)
+base_url: '"https://www.ligibet.com"'
 browser_path: /usr/bin/chrome
 username: user1
 password: pass1

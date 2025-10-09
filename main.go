@@ -20,6 +20,7 @@ func main() {
 	mode := flag.String("mode", "fetch", "Mode: generate, fetch, or auto")
 	bookiesFile := flag.String("bookies-file", "bookies.txt", "Bookies file")
 	outputDir := flag.String("output-dir", "EMC", "Output directory")
+	bakeOverrides := flag.Bool("bake-overrides", false, "Apply overrides and persist them to config.yaml, then delete overrides.yaml")
 	flag.Parse()
 
 	// Load enabled bookies from bookies.txt
@@ -31,8 +32,11 @@ func main() {
 
 	overridesPath := filepath.Join(*outputDir, "overrides.yaml")
 	var overrides config.OverrideMap
+	usingOverrides := false
+
 	if _, err := os.Stat(overridesPath); err == nil {
 		overrides, _ = config.LoadOverrides(overridesPath)
+		usingOverrides = true
 	} else {
 		overrides = make(config.OverrideMap)
 	}
@@ -40,16 +44,25 @@ func main() {
 	switch *mode {
 	case "generate":
 		generateConfigs(enabledBookies, overrides, *outputDir)
+		if *bakeOverrides && usingOverrides {
+			bakeOverridesFile(overridesPath, *outputDir)
+		}
+
 	case "fetch":
 		fullReport := fetchConfigs(enabledBookies, *outputDir)
 		createLatestSnippet(fullReport, *outputDir)
+
 	case "auto":
 		if configsMissing(enabledBookies, *outputDir) {
 			fmt.Println("🛠️ Configs missing – generating first...")
 			generateConfigs(enabledBookies, overrides, *outputDir)
+			if *bakeOverrides && usingOverrides {
+				bakeOverridesFile(overridesPath, *outputDir)
+			}
 		}
 		fullReport := fetchConfigs(enabledBookies, *outputDir)
 		createLatestSnippet(fullReport, *outputDir)
+
 	default:
 		fmt.Printf("❌ Unknown mode: %s\n", *mode)
 		os.Exit(1)
@@ -69,25 +82,31 @@ func configsMissing(bookies []utils.Bookie, outputDir string) bool {
 
 // generateConfigs writes config files for all bookies
 func generateConfigs(bookies []utils.Bookie, overrides config.OverrideMap, outputDir string) {
-	fmt.Println("🛠️ Generating configs...")
+    fmt.Println("🛠️ Generating configs...")
 
-	for _, b := range bookies {
-		folderName := strings.ToLower(b.Name())
-		folderPath := filepath.Join(outputDir, folderName)
-		if err := os.MkdirAll(folderPath, 0755); err != nil {
-			fmt.Printf("❌ Failed to create folder %s: %v\n", folderPath, err)
-			continue
-		}
+    for _, b := range bookies {
+        folderName := strings.ToLower(b.Name())
+        folderPath := filepath.Join(outputDir, folderName)
+        if err := os.MkdirAll(folderPath, 0755); err != nil {
+            fmt.Printf("❌ Failed to create folder %s: %v\n", folderPath, err)
+            continue
+        }
 
-		// Generate the config using the proper URL from utils.Bookie
-		err := config.GenerateConfigs([]string{b.Name()}, overrides, outputDir, b.URL(), "/usr/bin/chrome")
-		if err != nil {
-			fmt.Printf("❌ Error generating config for %s: %v\n", b.Name(), err)
-			continue
-		}
+        // Ensure we are passing a map[string]interface{} as expected
+        overrideForBookie, exists := overrides[b.Name()]
+        if !exists {
+            overrideForBookie = make(map[string]interface{})
+        }
 
-		fmt.Printf("✅ Updated config for %s at %s/%s/config.yaml\n", b.Name(), outputDir, folderName)
-	}
+        // Wrap the override in a map of OverrideMap
+        err := config.GenerateConfig(b.Name(), config.OverrideMap{b.Name(): overrideForBookie}, outputDir, b.URL(), "/usr/bin/chrome", 0)
+        if err != nil {
+            fmt.Printf("❌ Error generating config for %s: %v\n", b.Name(), err)
+            continue
+        }
+
+        fmt.Printf("✅ Updated config for %s at %s/%s/config.yaml\n", b.Name(), outputDir, folderName)
+    }
 }
 
 // fetchConfigs fetches all bookies and returns the full report
@@ -168,5 +187,15 @@ func loadConfig(path string) (*config.Sportsbook, error) {
 		return nil, err
 	}
 	return &sb, nil
+}
+
+// bakeOverridesFile renames overrides.yaml → overrides.baked.yaml
+func bakeOverridesFile(overridesPath, outputDir string) {
+	bakedPath := filepath.Join(outputDir, "overrides.baked.yaml")
+	if err := os.Rename(overridesPath, bakedPath); err != nil {
+		fmt.Printf("⚠️ Failed to rename overrides.yaml: %v\n", err)
+	} else {
+		fmt.Printf("🍞 Overrides baked and saved to config.yaml files. Original overrides.yaml renamed to %s\n", bakedPath)
+	}
 }
 

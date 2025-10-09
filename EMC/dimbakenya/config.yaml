@@ -1,5 +1,5 @@
 name: dimbakenya
-base_url: https://www.dimbakenya.com/%!(EXTRA string=dimbakenya)
+base_url: '"https://www.dimbakenya.com/"'
 browser_path: /usr/bin/chrome
 username: user1
 password: pass1

@@ -15,35 +15,35 @@
 ---
 
 ## betgr8 (https://lite.betgr8.com/ke/?force=1#/)
-- SportDropdown: ❌
+- LiveEvent: ❌
+- LoginButton: ❌
+- DatePicker: ❌
+- SearchButton: ❌
 - Moneyline: ❌
 - Spread: ❌
+- Totals: ❌
 - InPlayBetBtn: ❌
 - UsernameInput: ❌
 - PasswordInput: ❌
-- DatePicker: ❌
-- SearchButton: ❌
-- Totals: ❌
+- SportDropdown: ❌
 - BetButton: ❌
 - BetHistory: ❌
-- LiveEvent: ❌
-- LoginButton: ❌
 Overall: ❌ Failed
 
 ## betway (https://www.betway.com)
-- Totals: ❌
-- LiveEvent: ❌
-- InPlayBetBtn: ❌
 - UsernameInput: ❌
 - PasswordInput: ❌
 - LoginButton: ❌
+- SearchButton: ❌
+- Totals: ❌
+- BetButton: ❌
+- BetHistory: ❌
+- LiveEvent: ❌
+- SportDropdown: ❌
 - DatePicker: ❌
 - Moneyline: ❌
 - Spread: ❌
-- BetButton: ❌
-- BetHistory: ❌
-- SportDropdown: ❌
-- SearchButton: ❌
+- InPlayBetBtn: ❌
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)
@@ -51,35 +51,35 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## inbetkenya (https://www.inbetkenya.co.ke/index.php?action=sport&tz=3.0&set_default_tz=1)
-- Spread: ❌
+- SportDropdown: ❌
+- DatePicker: ❌
+- Totals: ❌
 - BetButton: ❌
 - BetHistory: ❌
-- LoginButton: ❌
-- SportDropdown: ❌
-- Totals: ❌
-- LiveEvent: ❌
-- InPlayBetBtn: ❌
 - UsernameInput: ❌
 - PasswordInput: ❌
-- DatePicker: ❌
+- LoginButton: ❌
 - SearchButton: ❌
 - Moneyline: ❌
+- Spread: ❌
+- LiveEvent: ❌
+- InPlayBetBtn: ❌
 Overall: ❌ Failed
 
 ## ligibet (https://www.ligibet.com)
-- Moneyline: ❌
-- Spread: ❌
-- LiveEvent: ❌
 - UsernameInput: ❌
-- DatePicker: ❌
-- Totals: ❌
-- BetButton: ❌
-- BetHistory: ❌
-- InPlayBetBtn: ❌
-- PasswordInput: ❌
 - LoginButton: ❌
 - SportDropdown: ❌
+- Spread: ❌
+- BetHistory: ❌
+- LiveEvent: ❌
+- InPlayBetBtn: ❌
+- PasswordInput: ❌
+- DatePicker: ❌
 - SearchButton: ❌
+- Moneyline: ❌
+- Totals: ❌
+- BetButton: ❌
 Overall: ❌ Failed
 
 ## parimatch (https://www.parimatch.com)
@@ -91,18 +91,18 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## sportybet (https://www.sportybet.com/int/sport/football/live_list)
-- SportDropdown: ❌
-- SearchButton: ❌
-- Moneyline: ❌
-- Spread: ❌
-- BetHistory: ❌
-- InPlayBetBtn: ❌
 - PasswordInput: ❌
 - LoginButton: ❌
-- DatePicker: ❌
-- Totals: ❌
+- SportDropdown: ❌
+- Moneyline: ❌
+- Spread: ❌
 - BetButton: ❌
+- BetHistory: ❌
 - LiveEvent: ❌
 - UsernameInput: ❌
+- DatePicker: ❌
+- SearchButton: ❌
+- Totals: ❌
+- InPlayBetBtn: ❌
 Overall: ❌ Failed
 

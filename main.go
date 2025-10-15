@@ -45,7 +45,7 @@ func main() {
 	case "generate":
 		generateConfigs(enabledBookies, overrides, *outputDir)
 		if *bakeOverrides && usingOverrides {
-			bakeOverridesFile(overridesPath, *outputDir)
+			bakeOverridesFile(*outputDir, overridesPath)
 		}
 
 	case "fetch":
@@ -57,7 +57,7 @@ func main() {
 			fmt.Println("🛠️ Configs missing – generating first...")
 			generateConfigs(enabledBookies, overrides, *outputDir)
 			if *bakeOverrides && usingOverrides {
-				bakeOverridesFile(overridesPath, *outputDir)
+				bakeOverridesFile(*outputDir, overridesPath)
 			}
 		}
 		fullReport := fetchConfigs(enabledBookies, *outputDir)
@@ -189,13 +189,52 @@ func loadConfig(path string) (*config.Sportsbook, error) {
 	return &sb, nil
 }
 
-// bakeOverridesFile renames overrides.yaml → overrides.baked.yaml
-func bakeOverridesFile(overridesPath, outputDir string) {
+// bakeOverridesFile merges overrides into the base config and renames the original overrides.yaml
+func bakeOverridesFile(outputDir, overridesPath string) {
+	// Load the base config (dimbakenya config)
+	baseConfigPath := filepath.Join(outputDir, "dimbakenya", "config.yaml")
+	baseConfigData, err := os.ReadFile(baseConfigPath)
+	if err != nil {
+		fmt.Printf("⚠️ Failed to read base config file: %v\n", err)
+		return
+	}
+
+	// Unmarshal the base config into the Sportsbook struct
+	var baseConfig config.Sportsbook
+	if err := yaml.Unmarshal(baseConfigData, &baseConfig); err != nil {
+		fmt.Printf("⚠️ Failed to unmarshal base config: %v\n", err)
+		return
+	}
+
+	// Load the overrides from the provided overrides.yaml
+	overrideMap, err := config.LoadOverrides(overridesPath)
+	if err != nil {
+		fmt.Printf("⚠️ Failed to load overrides file: %v\n", err)
+		return
+	}
+
+	// Apply overrides to the base config
+	baseConfig.ApplyOverrides(overrideMap)
+
+	// Save the updated config back to the output directory
+	configPath := filepath.Join(outputDir, "config.yaml")
+	updatedConfigData, err := yaml.Marshal(baseConfig)
+	if err != nil {
+		fmt.Printf("⚠️ Failed to marshal updated config: %v\n", err)
+		return
+	}
+
+	// Write the updated config to config.yaml
+	if err := os.WriteFile(configPath, updatedConfigData, 0644); err != nil {
+		fmt.Printf("⚠️ Failed to write updated config file: %v\n", err)
+		return
+	}
+
+	// Rename the original overrides.yaml to overrides.baked.yaml as a backup
 	bakedPath := filepath.Join(outputDir, "overrides.baked.yaml")
 	if err := os.Rename(overridesPath, bakedPath); err != nil {
 		fmt.Printf("⚠️ Failed to rename overrides.yaml: %v\n", err)
 	} else {
-		fmt.Printf("🍞 Overrides baked and saved to config.yaml files. Original overrides.yaml renamed to %s\n", bakedPath)
+		fmt.Printf("🍞 Overrides baked and saved to config.yaml. Original overrides.yaml renamed to %s\n", bakedPath)
 	}
 }
-

@@ -14,12 +14,12 @@ import (
 // buildSportsbook constructs the Sportsbook struct with base settings and optional override
 func buildSportsbook(bookie string, index int, baseURL, browserPath string, overrides OverrideMap) Sportsbook {
 	sb := Sportsbook{
-		Name:       bookie,
-		BaseURL:    baseURL,
+		Name:        bookie,
+		BaseURL:     baseURL,
 		BrowserPath: browserPath,
-		Username:   fmt.Sprintf("user%d", index+1),
-		Password:   fmt.Sprintf("pass%d", index+1),
-		Region:     "KE", // Default region
+		Username:    fmt.Sprintf("user%d", index+1),
+		Password:    fmt.Sprintf("pass%d", index+1),
+		Region:      "KE", // Default region
 		Selectors: Selectors{
 			Login: struct {
 				UsernameInput string `yaml:"username_input"`
@@ -55,14 +55,14 @@ func buildSportsbook(bookie string, index int, baseURL, browserPath string, over
 				EventTeam:     "div.event-team",
 			},
 			OddsSelector: struct {
-				MatchResult  string `yaml:"match_result"`
-				OverUnder    string `yaml:"over_under"`
-				PointSpread  string `yaml:"point_spread"`
+				Moneyline  string `yaml:"moneyline"`
+				Spread    string `yaml:"spread"`
+				Totals     string `yaml:"totals"`
 				OddsDropdown string `yaml:"odds_dropdown"`
 			}{
-				MatchResult:  "div.match-result",
-				OverUnder:    "div.over-under",
-				PointSpread:  "div.point-spread",
+				Moneyline:  "div.match-result",
+				Spread:     "div.over-under",
+				Totals:      "div.point-spread",
 				OddsDropdown: "select#odds",
 			},
 			BetSlip: struct {
@@ -83,18 +83,22 @@ func buildSportsbook(bookie string, index int, baseURL, browserPath string, over
 				BetSlipItem:     "div.bet-slip-item",
 			},
 			LiveBetting: struct {
-				LiveBettingButton    string `yaml:"live_betting_button"`
-				OddsChangeIndicator  string `yaml:"odds_change_indicator"`
-				LiveEventItem        string `yaml:"live_event_item"`
-				LiveScore            string `yaml:"live_score"`
-				LiveOddSelector      string `yaml:"live_odd_selector"`
+				LiveBettingButton   string `yaml:"live_betting_button"`
+				OddsChangeIndicator string `yaml:"odds_change_indicator"`
+				LiveEventItem       string `yaml:"live_event_item"`
+				LiveScore           string `yaml:"live_score"`
+				LiveOddSelector     string `yaml:"live_odd_selector"`
+				LiveEvent           string `yaml:"live_event"`
+				InPlayBetButton     string `yaml:"in_play_bet_button"`
 			}{
 				LiveBettingButton:   "button#liveBetting",
 				OddsChangeIndicator: "div.odds-change-indicator",
 				LiveEventItem:       "div.live-event-item",
 				LiveScore:           "div.live-score",
 				LiveOddSelector:     "div.live-odd-selector",
+				LiveEvent:           "div.live-event",
 			},
+
 			LineMovement: struct {
 				LineChangeIndicator string `yaml:"line_change_indicator"`
 				OddsHistory         string `yaml:"odds_history"`
@@ -116,24 +120,24 @@ func buildSportsbook(bookie string, index int, baseURL, browserPath string, over
 				ResetFiltersButton: "button#resetFilters",
 			},
 			BetConfirmation: struct {
-				ConfirmButton   string `yaml:"confirm_button"`
-				ErrorMessage    string `yaml:"error_message"`
-				SuccessMessage  string `yaml:"success_message"`
-				BetSummary      string `yaml:"bet_summary"`
+				ConfirmButton  string `yaml:"confirm_button"`
+				ErrorMessage   string `yaml:"error_message"`
+				SuccessMessage string `yaml:"success_message"`
+				BetSummary     string `yaml:"bet_summary"`
 			}{
-				ConfirmButton:   "button#confirmBet",
-				ErrorMessage:    "div#errorMessage",
-				SuccessMessage:  "div#successMessage",
-				BetSummary:      "div#betSummary",
+				ConfirmButton:  "button#confirmBet",
+				ErrorMessage:   "div#errorMessage",
+				SuccessMessage: "div#successMessage",
+				BetSummary:     "div#betSummary",
 			},
 			BetHistory: struct {
-				HistoryPageLink   string `yaml:"history_page_link"`
-				BetRowSelector    string `yaml:"bet_row_selector"`
-				EventColumn       string `yaml:"event_column"`
-				StakeColumn       string `yaml:"stake_column"`
-				OutcomeColumn     string `yaml:"outcome_column"`
-				FilterByResult    string `yaml:"filter_by_result"`
-				FilterByMarket    string `yaml:"filter_by_market"`
+				HistoryPageLink string `yaml:"history_page_link"`
+				BetRowSelector  string `yaml:"bet_row_selector"`
+				EventColumn     string `yaml:"event_column"`
+				StakeColumn     string `yaml:"stake_column"`
+				OutcomeColumn   string `yaml:"outcome_column"`
+				FilterByResult  string `yaml:"filter_by_result"`
+				FilterByMarket  string `yaml:"filter_by_market"`
 			}{
 				HistoryPageLink: "a#betHistoryLink",
 				BetRowSelector:  "div.bet-row",
@@ -155,17 +159,17 @@ func buildSportsbook(bookie string, index int, baseURL, browserPath string, over
 				ApplyPromoButton: "button#applyPromo",
 			},
 			CashOut: struct {
-				CashOutButton        string `yaml:"cash_out_button"`
-				OpenBet              string `yaml:"open_bet"`
+				CashOutButton           string `yaml:"cash_out_button"`
+				OpenBet                 string `yaml:"open_bet"`
 				CancellableBetIndicator string `yaml:"cancellable_bet_indicator"`
-				CashoutOffer         string `yaml:"cashout_offer"`
-				ConfirmCashoutButton string `yaml:"confirm_cashout_button"`
+				CashoutOffer            string `yaml:"cashout_offer"`
+				ConfirmCashoutButton    string `yaml:"confirm_cashout_button"`
 			}{
-				CashOutButton:        "button#cashOut",
-				OpenBet:              "div.open-bet",
+				CashOutButton:           "button#cashOut",
+				OpenBet:                 "div.open-bet",
 				CancellableBetIndicator: "div.cancellable-bet",
-				CashoutOffer:         "div.cashout-offer",
-				ConfirmCashoutButton: "button#confirmCashout",
+				CashoutOffer:            "div.cashout-offer",
+				ConfirmCashoutButton:    "button#confirmCashout",
 			},
 			NotificationCenter: struct {
 				NotificationPopup   string `yaml:"notification_popup"`
@@ -179,9 +183,8 @@ func buildSportsbook(bookie string, index int, baseURL, browserPath string, over
 				NotificationType:    "div.notification-type",
 			},
 		},
-		BetButton:   "button#placeBet",
-		BetHistory:  "div#betHistory",
-		LiveBetting: LiveBetting{LiveEvent: "div.live-event", InPlayBetButton: "button#inPlayBet"},
+		BetButton:  "button#placeBet",
+		BetHistory: "div#betHistory",
 		Timeout: Timeout{
 			BetOperation: 30000, // 30 seconds timeout for placing a bet
 			PageLoad:     5000,  // 5 seconds timeout for page loading

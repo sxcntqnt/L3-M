@@ -5,22 +5,6 @@
       "url": "https://lite.betgr8.com/ke/?force=1#/",
       "results": [
         {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "LoginButton",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
-          "status": "❌"
-        },
-        {
           "label": "Moneyline",
           "status": "❌"
         },
@@ -33,7 +17,19 @@
           "status": "❌"
         },
         {
-          "label": "InPlayBetBtn",
+          "label": "BetButton",
+          "status": "❌"
+        },
+        {
+          "label": "LoginButton",
+          "status": "❌"
+        },
+        {
+          "label": "SearchButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory",
           "status": "❌"
         },
         {
@@ -49,11 +45,7 @@
           "status": "❌"
         },
         {
-          "label": "BetButton",
-          "status": "❌"
-        },
-        {
-          "label": "BetHistory",
+          "label": "DatePicker",
           "status": "❌"
         }
       ],
@@ -76,30 +68,6 @@
           "status": "❌"
         },
         {
-          "label": "SearchButton",
-          "status": "❌"
-        },
-        {
-          "label": "Totals",
-          "status": "❌"
-        },
-        {
-          "label": "BetButton",
-          "status": "❌"
-        },
-        {
-          "label": "BetHistory",
-          "status": "❌"
-        },
-        {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
           "label": "DatePicker",
           "status": "❌"
         },
@@ -108,11 +76,27 @@
           "status": "❌"
         },
         {
+          "label": "BetButton",
+          "status": "❌"
+        },
+        {
+          "label": "SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "SearchButton",
+          "status": "❌"
+        },
+        {
           "label": "Spread",
           "status": "❌"
         },
         {
-          "label": "InPlayBetBtn",
+          "label": "Totals",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory",
           "status": "❌"
         }
       ],
@@ -124,7 +108,7 @@
       "results": [
         {
           "label": "Fetch error",
-          "status": "failed to fetch \"https://www.dimbakenya.com/\": Get \"https://www.dimbakenya.com/\": dial tcp: lookup www.dimbakenya.com on 127.0.0.53:53: no such host"
+          "status": "failed to fetch \"https://www.dimbakenya.com/\": Get \"https://www.dimbakenya.com/\": dial tcp: lookup www.dimbakenya.com on 127.0.0.11:53: no such host"
         }
       ],
       "all_pass": false
@@ -134,56 +118,8 @@
       "url": "https://www.inbetkenya.co.ke/index.php?action=sport\u0026tz=3.0\u0026set_default_tz=1",
       "results": [
         {
-          "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "Totals",
-          "status": "❌"
-        },
-        {
-          "label": "BetButton",
-          "status": "❌"
-        },
-        {
-          "label": "BetHistory",
-          "status": "❌"
-        },
-        {
-          "label": "UsernameInput",
-          "status": "❌"
-        },
-        {
-          "label": "PasswordInput",
-          "status": "❌"
-        },
-        {
-          "label": "LoginButton",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
-          "status": "❌"
-        },
-        {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
-          "label": "Spread",
-          "status": "❌"
-        },
-        {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "InPlayBetBtn",
-          "status": "❌"
+          "label": "Fetch error",
+          "status": "received HTTP 403 for \"https://www.inbetkenya.co.ke/index.php?action=sport\u0026tz=3.0\u0026set_default_tz=1\""
         }
       ],
       "all_pass": false
@@ -193,15 +129,11 @@
       "url": "https://www.ligibet.com",
       "results": [
         {
-          "label": "UsernameInput",
+          "label": "DatePicker",
           "status": "❌"
         },
         {
-          "label": "LoginButton",
-          "status": "❌"
-        },
-        {
-          "label": "SportDropdown",
+          "label": "SearchButton",
           "status": "❌"
         },
         {
@@ -209,27 +141,11 @@
           "status": "❌"
         },
         {
-          "label": "BetHistory",
+          "label": "UsernameInput",
           "status": "❌"
         },
         {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "InPlayBetBtn",
-          "status": "❌"
-        },
-        {
-          "label": "PasswordInput",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
+          "label": "SportDropdown",
           "status": "❌"
         },
         {
@@ -242,6 +158,18 @@
         },
         {
           "label": "BetButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory",
+          "status": "❌"
+        },
+        {
+          "label": "PasswordInput",
+          "status": "❌"
+        },
+        {
+          "label": "LoginButton",
           "status": "❌"
         }
       ],
@@ -252,8 +180,48 @@
       "url": "https://www.parimatch.com",
       "results": [
         {
-          "label": "Fetch error",
-          "status": "received HTTP 403 for \"https://www.parimatch.com\""
+          "label": "UsernameInput",
+          "status": "❌"
+        },
+        {
+          "label": "LoginButton",
+          "status": "❌"
+        },
+        {
+          "label": "Spread",
+          "status": "❌"
+        },
+        {
+          "label": "BetButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory",
+          "status": "❌"
+        },
+        {
+          "label": "PasswordInput",
+          "status": "❌"
+        },
+        {
+          "label": "SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "DatePicker",
+          "status": "❌"
+        },
+        {
+          "label": "SearchButton",
+          "status": "❌"
+        },
+        {
+          "label": "Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "Totals",
+          "status": "❌"
         }
       ],
       "all_pass": false
@@ -274,15 +242,19 @@
       "url": "https://www.sportybet.com/int/sport/football/live_list",
       "results": [
         {
-          "label": "PasswordInput",
+          "label": "DatePicker",
           "status": "❌"
         },
         {
-          "label": "LoginButton",
+          "label": "BetButton",
           "status": "❌"
         },
         {
-          "label": "SportDropdown",
+          "label": "UsernameInput",
+          "status": "❌"
+        },
+        {
+          "label": "SearchButton",
           "status": "❌"
         },
         {
@@ -294,7 +266,7 @@
           "status": "❌"
         },
         {
-          "label": "BetButton",
+          "label": "Totals",
           "status": "❌"
         },
         {
@@ -302,27 +274,15 @@
           "status": "❌"
         },
         {
-          "label": "LiveEvent",
+          "label": "PasswordInput",
           "status": "❌"
         },
         {
-          "label": "UsernameInput",
+          "label": "LoginButton",
           "status": "❌"
         },
         {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
-          "status": "❌"
-        },
-        {
-          "label": "Totals",
-          "status": "❌"
-        },
-        {
-          "label": "InPlayBetBtn",
+          "label": "SportDropdown",
           "status": "❌"
         }
       ],
@@ -335,22 +295,6 @@
       "url": "https://lite.betgr8.com/ke/?force=1#/",
       "results": [
         {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "LoginButton",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
-          "status": "❌"
-        },
-        {
           "label": "Moneyline",
           "status": "❌"
         },
@@ -363,7 +307,19 @@
           "status": "❌"
         },
         {
-          "label": "InPlayBetBtn",
+          "label": "BetButton",
+          "status": "❌"
+        },
+        {
+          "label": "LoginButton",
+          "status": "❌"
+        },
+        {
+          "label": "SearchButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory",
           "status": "❌"
         },
         {
@@ -379,11 +335,7 @@
           "status": "❌"
         },
         {
-          "label": "BetButton",
-          "status": "❌"
-        },
-        {
-          "label": "BetHistory",
+          "label": "DatePicker",
           "status": "❌"
         }
       ],
@@ -406,30 +358,6 @@
           "status": "❌"
         },
         {
-          "label": "SearchButton",
-          "status": "❌"
-        },
-        {
-          "label": "Totals",
-          "status": "❌"
-        },
-        {
-          "label": "BetButton",
-          "status": "❌"
-        },
-        {
-          "label": "BetHistory",
-          "status": "❌"
-        },
-        {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
           "label": "DatePicker",
           "status": "❌"
         },
@@ -438,11 +366,27 @@
           "status": "❌"
         },
         {
+          "label": "BetButton",
+          "status": "❌"
+        },
+        {
+          "label": "SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "SearchButton",
+          "status": "❌"
+        },
+        {
           "label": "Spread",
           "status": "❌"
         },
         {
-          "label": "InPlayBetBtn",
+          "label": "Totals",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory",
           "status": "❌"
         }
       ],
@@ -454,7 +398,7 @@
       "results": [
         {
           "label": "Fetch error",
-          "status": "failed to fetch \"https://www.dimbakenya.com/\": Get \"https://www.dimbakenya.com/\": dial tcp: lookup www.dimbakenya.com on 127.0.0.53:53: no such host"
+          "status": "failed to fetch \"https://www.dimbakenya.com/\": Get \"https://www.dimbakenya.com/\": dial tcp: lookup www.dimbakenya.com on 127.0.0.11:53: no such host"
         }
       ],
       "all_pass": false
@@ -464,56 +408,8 @@
       "url": "https://www.inbetkenya.co.ke/index.php?action=sport\u0026tz=3.0\u0026set_default_tz=1",
       "results": [
         {
-          "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "Totals",
-          "status": "❌"
-        },
-        {
-          "label": "BetButton",
-          "status": "❌"
-        },
-        {
-          "label": "BetHistory",
-          "status": "❌"
-        },
-        {
-          "label": "UsernameInput",
-          "status": "❌"
-        },
-        {
-          "label": "PasswordInput",
-          "status": "❌"
-        },
-        {
-          "label": "LoginButton",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
-          "status": "❌"
-        },
-        {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
-          "label": "Spread",
-          "status": "❌"
-        },
-        {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "InPlayBetBtn",
-          "status": "❌"
+          "label": "Fetch error",
+          "status": "received HTTP 403 for \"https://www.inbetkenya.co.ke/index.php?action=sport\u0026tz=3.0\u0026set_default_tz=1\""
         }
       ],
       "all_pass": false
@@ -523,15 +419,11 @@
       "url": "https://www.ligibet.com",
       "results": [
         {
-          "label": "UsernameInput",
+          "label": "DatePicker",
           "status": "❌"
         },
         {
-          "label": "LoginButton",
-          "status": "❌"
-        },
-        {
-          "label": "SportDropdown",
+          "label": "SearchButton",
           "status": "❌"
         },
         {
@@ -539,27 +431,11 @@
           "status": "❌"
         },
         {
-          "label": "BetHistory",
+          "label": "UsernameInput",
           "status": "❌"
         },
         {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "InPlayBetBtn",
-          "status": "❌"
-        },
-        {
-          "label": "PasswordInput",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
+          "label": "SportDropdown",
           "status": "❌"
         },
         {
@@ -572,6 +448,18 @@
         },
         {
           "label": "BetButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory",
+          "status": "❌"
+        },
+        {
+          "label": "PasswordInput",
+          "status": "❌"
+        },
+        {
+          "label": "LoginButton",
           "status": "❌"
         }
       ],
@@ -582,8 +470,48 @@
       "url": "https://www.parimatch.com",
       "results": [
         {
-          "label": "Fetch error",
-          "status": "received HTTP 403 for \"https://www.parimatch.com\""
+          "label": "UsernameInput",
+          "status": "❌"
+        },
+        {
+          "label": "LoginButton",
+          "status": "❌"
+        },
+        {
+          "label": "Spread",
+          "status": "❌"
+        },
+        {
+          "label": "BetButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory",
+          "status": "❌"
+        },
+        {
+          "label": "PasswordInput",
+          "status": "❌"
+        },
+        {
+          "label": "SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "DatePicker",
+          "status": "❌"
+        },
+        {
+          "label": "SearchButton",
+          "status": "❌"
+        },
+        {
+          "label": "Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "Totals",
+          "status": "❌"
         }
       ],
       "all_pass": false
@@ -604,15 +532,19 @@
       "url": "https://www.sportybet.com/int/sport/football/live_list",
       "results": [
         {
-          "label": "PasswordInput",
+          "label": "DatePicker",
           "status": "❌"
         },
         {
-          "label": "LoginButton",
+          "label": "BetButton",
           "status": "❌"
         },
         {
-          "label": "SportDropdown",
+          "label": "UsernameInput",
+          "status": "❌"
+        },
+        {
+          "label": "SearchButton",
           "status": "❌"
         },
         {
@@ -624,7 +556,7 @@
           "status": "❌"
         },
         {
-          "label": "BetButton",
+          "label": "Totals",
           "status": "❌"
         },
         {
@@ -632,27 +564,15 @@
           "status": "❌"
         },
         {
-          "label": "LiveEvent",
+          "label": "PasswordInput",
           "status": "❌"
         },
         {
-          "label": "UsernameInput",
+          "label": "LoginButton",
           "status": "❌"
         },
         {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
-          "status": "❌"
-        },
-        {
-          "label": "Totals",
-          "status": "❌"
-        },
-        {
-          "label": "InPlayBetBtn",
+          "label": "SportDropdown",
           "status": "❌"
         }
       ],

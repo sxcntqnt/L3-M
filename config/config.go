@@ -4,18 +4,17 @@ import "gopkg.in/yaml.v3"
 
 // Sportsbook represents a single bookie's configuration
 type Sportsbook struct {
-	Name            string        `yaml:"name"`
-	BaseURL         string        `yaml:"base_url"`
-	BrowserPath     string        `yaml:"browser_path"`
-	Username        string        `yaml:"username"`
-	Password        string        `yaml:"password"`
-	Region          string        `yaml:"region"`
-	Selectors       Selectors     `yaml:"selectors"`
-	BetButton       string        `yaml:"bet_button"`
-	BetHistory      string        `yaml:"bet_history"`
-	LiveBetting     LiveBetting  `yaml:"live_betting"`
-	Timeout         Timeout       `yaml:"timeout"`
-	Betting         Betting       `yaml:"betting"`
+	Name            string          `yaml:"name"`
+	BaseURL         string          `yaml:"base_url"`
+	BrowserPath     string          `yaml:"browser_path"`
+	Username        string          `yaml:"username"`
+	Password        string          `yaml:"password"`
+	Region          string          `yaml:"region"`
+	Selectors       Selectors       `yaml:"selectors"`
+	BetButton       string          `yaml:"bet_button"`
+	BetHistory      string          `yaml:"bet_history"`
+	Timeout         Timeout         `yaml:"timeout"`
+	Betting         Betting         `yaml:"betting"`
 	UserCredentials UserCredentials `yaml:"user_credentials"`
 }
 
@@ -28,24 +27,24 @@ type Selectors struct {
 	} `yaml:"login"`
 
 	Session struct {
-		LogoutButton     string `yaml:"logout_button"`
-		SessionUserInfo  string `yaml:"session_user_info"`
+		LogoutButton    string `yaml:"logout_button"`
+		SessionUserInfo string `yaml:"session_user_info"`
 	} `yaml:"session"`
 
 	EventSearch struct {
-		SportDropdown  string `yaml:"sport_dropdown"`
-		DatePicker     string `yaml:"date_picker"`
-		SearchButton   string `yaml:"search_button"`
-		EventResults   string `yaml:"event_results"`
-		EventItem      string `yaml:"event_item"`
-		EventTitle     string `yaml:"event_title"`
-		EventTeam      string `yaml:"event_team"`
+		SportDropdown string `yaml:"sport_dropdown"`
+		DatePicker    string `yaml:"date_picker"`
+		SearchButton  string `yaml:"search_button"`
+		EventResults  string `yaml:"event_results"`
+		EventItem     string `yaml:"event_item"`
+		EventTitle    string `yaml:"event_title"`
+		EventTeam     string `yaml:"event_team"`
 	} `yaml:"event_search"`
 
 	OddsSelector struct {
-		MatchResult  string `yaml:"match_result"`
-		OverUnder    string `yaml:"over_under"`
-		PointSpread  string `yaml:"point_spread"`
+		Moneyline  string `yaml:"moneyline"`
+		Spread    string `yaml:"spread"`
+		Totals     string `yaml:"totals"`
 		OddsDropdown string `yaml:"odds_dropdown"`
 	} `yaml:"odds_selector"`
 
@@ -60,11 +59,13 @@ type Selectors struct {
 	} `yaml:"bet_slip"`
 
 	LiveBetting struct {
-		LiveBettingButton    string `yaml:"live_betting_button"`
-		OddsChangeIndicator  string `yaml:"odds_change_indicator"`
-		LiveEventItem        string `yaml:"live_event_item"`
-		LiveScore            string `yaml:"live_score"`
-		LiveOddSelector      string `yaml:"live_odd_selector"`
+		LiveBettingButton   string `yaml:"live_betting_button"`
+		OddsChangeIndicator string `yaml:"odds_change_indicator"`
+		LiveEventItem       string `yaml:"live_event_item"`
+		LiveScore           string `yaml:"live_score"`
+		LiveOddSelector     string `yaml:"live_odd_selector"`
+		LiveEvent           string `yaml:"live_event"`
+		InPlayBetButton     string `yaml:"in_play_bet_button"`
 	} `yaml:"live_betting"`
 
 	LineMovement struct {
@@ -74,27 +75,27 @@ type Selectors struct {
 	} `yaml:"line_movement"`
 
 	FilterOptions struct {
-		SportDropdown        string `yaml:"sport_dropdown"`
-		MarketTypeDropdown   string `yaml:"market_type_dropdown"`
-		TimeFilter           string `yaml:"time_filter"`
-		ResetFiltersButton   string `yaml:"reset_filters_button"`
+		SportDropdown      string `yaml:"sport_dropdown"`
+		MarketTypeDropdown string `yaml:"market_type_dropdown"`
+		TimeFilter         string `yaml:"time_filter"`
+		ResetFiltersButton string `yaml:"reset_filters_button"`
 	} `yaml:"filter_options"`
 
 	BetConfirmation struct {
-		ConfirmButton   string `yaml:"confirm_button"`
-		ErrorMessage    string `yaml:"error_message"`
-		SuccessMessage  string `yaml:"success_message"`
-		BetSummary      string `yaml:"bet_summary"`
+		ConfirmButton  string `yaml:"confirm_button"`
+		ErrorMessage   string `yaml:"error_message"`
+		SuccessMessage string `yaml:"success_message"`
+		BetSummary     string `yaml:"bet_summary"`
 	} `yaml:"bet_confirmation"`
 
 	BetHistory struct {
-		HistoryPageLink   string `yaml:"history_page_link"`
-		BetRowSelector    string `yaml:"bet_row_selector"`
-		EventColumn       string `yaml:"event_column"`
-		StakeColumn       string `yaml:"stake_column"`
-		OutcomeColumn     string `yaml:"outcome_column"`
-		FilterByResult    string `yaml:"filter_by_result"`
-		FilterByMarket    string `yaml:"filter_by_market"`
+		HistoryPageLink string `yaml:"history_page_link"`
+		BetRowSelector  string `yaml:"bet_row_selector"`
+		EventColumn     string `yaml:"event_column"`
+		StakeColumn     string `yaml:"stake_column"`
+		OutcomeColumn   string `yaml:"outcome_column"`
+		FilterByResult  string `yaml:"filter_by_result"`
+		FilterByMarket  string `yaml:"filter_by_market"`
 	} `yaml:"bet_history"`
 
 	Promotions struct {
@@ -105,11 +106,11 @@ type Selectors struct {
 	} `yaml:"promotions"`
 
 	CashOut struct {
-		CashOutButton          string `yaml:"cash_out_button"`
-		OpenBet                string `yaml:"open_bet"`
+		CashOutButton           string `yaml:"cash_out_button"`
+		OpenBet                 string `yaml:"open_bet"`
 		CancellableBetIndicator string `yaml:"cancellable_bet_indicator"`
-		CashoutOffer           string `yaml:"cashout_offer"`
-		ConfirmCashoutButton   string `yaml:"confirm_cashout_button"`
+		CashoutOffer            string `yaml:"cashout_offer"`
+		ConfirmCashoutButton    string `yaml:"confirm_cashout_button"`
 	} `yaml:"cash_out"`
 
 	NotificationCenter struct {
@@ -151,3 +152,4 @@ func (sb *Sportsbook) ApplyOverrides(overrides map[string]interface{}) {
 	data, _ := yaml.Marshal(overrides)
 	_ = yaml.Unmarshal(data, sb)
 }
+

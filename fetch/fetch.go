@@ -84,8 +84,8 @@ func VerifyBookieWithConfig(name, url string, cfg *config.Sportsbook) report.Boo
 		"Totals":        cfg.Selectors.OddsSelector.Totals,
 		"BetButton":     cfg.BetButton,
 		"BetHistory":    cfg.BetHistory,
-		"LiveEvent":     cfg.LiveBetting.LiveEvent,
-		"InPlayBetBtn":  cfg.LiveBetting.InPlayBetButton,
+		"LiveEvent":     cfg.Selectors.LiveBetting.LiveEvent,
+		"InPlayBetBtn":  cfg.Selectors.LiveBetting.InPlayBetButton,
 	}
 
 	for label, selector := range checks {

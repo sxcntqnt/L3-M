@@ -1,6 +1,6 @@
 package config
 
-import "gopkg.in/yaml.v3"
+import "github.com/go-yaml/yaml/v3"
 
 // Sportsbook represents a single bookie's configuration
 type Sportsbook struct {

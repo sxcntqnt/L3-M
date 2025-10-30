@@ -9,7 +9,7 @@ jobs:
   run-go-program:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout main branch (default)
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -25,16 +25,9 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.22' # or whichever version you need
+          go-version: '1.22'
 
-      # Initialize module and fetch dependencies
-      - name: Prepare Go modules
-        run: |
-          if [ ! -f go.mod ]; then
-            go mod init temp
-          fi
-          go get gopkg.in/yaml.v3
-
+      # Check for open PR from secondary to main
       - name: Check for pending pull requests
         id: check-pr
         run: |
@@ -49,6 +42,28 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Run Go program
+      # Only proceed if no PR is open
+      - name: Checkout secondary branch into main-diago
         if: env.pr_found == 'false'
-        run: go run diago.go
+        uses: actions/checkout@v3
+        with:
+          ref: secondary
+          path: main-diago
+          fetch-depth: 0
+
+      # Initialize Go module and fetch dependencies inside main-diago
+      - name: Prepare Go modules in main-diago
+        if: env.pr_found == 'false'
+        working-directory: main-diago
+        run: |
+          if [ ! -f go.mod ]; then
+            go mod init main-diago || echo "Module init failed, continuing..."
+          fi
+          go get gopkg.in/yaml.v3
+
+      # Run main.go with full command
+      - name: Run main.go from main-diago
+        if: env.pr_found == 'false'
+        working-directory: main-diago
+        run: |
+          go run main.go --mode=auto --bookies-file=bookies.txt --output-dir=EMC --bake

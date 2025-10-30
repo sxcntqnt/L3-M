@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"gopkg.in/yaml.v3"
+	"github.com/go-yaml/yaml/v3"
 )
 
 // buildSportsbook constructs the Sportsbook struct with base settings and optional override

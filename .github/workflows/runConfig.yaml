@@ -57,9 +57,10 @@ jobs:
         working-directory: main-diago
         run: |
           if [ ! -f go.mod ]; then
-            go mod init main-diago || echo "Module init failed, continuing..."
+            go mod init diago-main
           fi
           go get gopkg.in/yaml.v3
+          go mod tidy
 
       # Run main.go with full command
       - name: Run main.go from main-diago

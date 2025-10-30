@@ -1,0 +1,24 @@
+name: 'Publish Wiki Dashboard'
+description: 'Publishes reports and documentation to the GitHub Wiki with a dashboard, historical archives, and workflow details'
+
+inputs:
+  output-dir:
+    description: 'Directory containing report files (e.g., EMC)'
+    required: false
+    default: 'EMC'
+
+  github-token:
+    description: 'GitHub token for wiki access and authentication'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Run Wiki Publisher
+      shell: bash
+      env:
+        OUTPUT_DIR: ${{ inputs.output-dir }}
+        GH_TOKEN: ${{ inputs.github-token }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
+      run: ${{ github.action_path }}/entrypoint.sh
+

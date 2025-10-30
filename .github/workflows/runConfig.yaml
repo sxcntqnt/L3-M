@@ -1,70 +1,88 @@
-name: Run Go Program in Main
+name: Diago Verification
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch: {}
+  schedule:
+    - cron: '0 0 * * 0'  # 📅 Runs every Sunday at midnight UTC
+
+permissions:
+  contents: write
+
+env:
+  OUTPUT_DIR: EMC
 
 jobs:
-  run-go-program:
+  run-diago:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout main branch (default)
+      - name: Checkout code 🛎️
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
-      # Setup GitHub CLI
-      - name: Setup GitHub CLI
-        uses: cli/gh-action@v2
-
-      - name: Verify gh version
-        run: gh --version
-
-      # Setup Go
-      - name: Setup Go
+      - name: Setup Go 🛠️
         uses: actions/setup-go@v5
         with:
           go-version: '1.22'
 
-      # Check for open PR from secondary to main
-      - name: Check for pending pull requests
-        id: check-pr
-        run: |
-          PR=$(gh pr list --state open --head secondary --base main --json number --jq '.[0].number')
-          if [ -n "$PR" ]; then
-            echo "Pending pull request found: $PR"
-            echo "pr_found=true" >> $GITHUB_ENV
-          else
-            echo "No pending pull request found"
-            echo "pr_found=false" >> $GITHUB_ENV
-          fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # Only proceed if no PR is open
-      - name: Checkout secondary branch into main-diago
-        if: env.pr_found == 'false'
-        uses: actions/checkout@v3
+      - name: Cache Go modules ⚡
+        uses: actions/cache@v3
         with:
-          ref: secondary
-          path: main-diago
-          fetch-depth: 0
+          path: |
+            ~/go/pkg/mod
+            ~/.cache/go-build
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
 
-      # Initialize Go module and fetch dependencies inside main-diago
-      - name: Prepare Go modules in main-diago
-        if: env.pr_found == 'false'
-        working-directory: main-diago
+      - name: Prepare Go modules 📦
         run: |
           if [ ! -f go.mod ]; then
-            go mod init diago-main
+            go mod init diago
           fi
           go get gopkg.in/yaml.v3
           go mod tidy
 
-      # Run main.go with full command
-      - name: Run main.go from main-diago
-        if: env.pr_found == 'false'
-        working-directory: main-diago
+      - name: Ensure output directory exists 📁
+        run: mkdir -p $OUTPUT_DIR
+
+      - name: Run Diago 🚀
         run: |
-          go run main.go --mode=auto --bookies-file=bookies.txt --output-dir=EMC --bake
+          set -e
+          if [ ! -d "$OUTPUT_DIR" ] || [ -z "$(ls -A $OUTPUT_DIR)" ]; then
+            echo "📁 $OUTPUT_DIR directory not found or empty – running in auto mode"
+            go run main.go --mode=auto --bookies-file=bookies.txt --output-dir=$OUTPUT_DIR
+          else
+            echo "📁 $OUTPUT_DIR directory found – running in fetch mode with baking"
+            go run main.go --mode=fetch --bookies-file=bookies.txt --output-dir=$OUTPUT_DIR --bake-overrides
+          fi
+
+      - name: Create latest report snippet 📄
+        run: |
+          awk '/## 📊 Summary/,0' $OUTPUT_DIR/report.md > $OUTPUT_DIR/latest_report.md
+          echo "" >> $OUTPUT_DIR/latest_report.md
+          echo "_Updated automatically via GitHub Actions_" >> $OUTPUT_DIR/latest_report.md
+
+      - name: Commit updated configs and reports 📝
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add $OUTPUT_DIR
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update generated configs and bookie reports"
+            git push
+          else
+            echo "✅ No changes to commit"
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish report to Wiki 📚
+        uses: ./.github/actions/publish-wiki
+        with:
+          output-dir: ${{ env.OUTPUT_DIR }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+

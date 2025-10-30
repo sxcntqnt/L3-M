@@ -1,0 +1,100 @@
+name: Update Configs
+
+on:
+  push:
+    branches:
+      - secondary
+  schedule:
+    - cron: "0 1 * * *"  # 📅 Runs daily at 01:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-configs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code 🛎️
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Ensure we're on the secondary branch 🌿
+        run: |
+          git fetch origin secondary
+          git switch secondary || git switch -c secondary origin/secondary
+
+      - name: Setup Go 🛠️
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - name: Prepare Go modules 📦
+        run: |
+          if [ ! -f go.mod ]; then
+            go mod init temp
+          fi
+          go get gopkg.in/yaml.v3
+          go mod tidy
+
+      - name: Ensure output directory exists 📁
+        run: mkdir -p EMC
+
+      - name: Run Diago 🚀
+        run: |
+          if [ ! -d "EMC" ] || [ -z "$(ls -A EMC)" ]; then
+            echo "📁 EMC directory missing or empty – running in auto mode"
+            go run main.go --mode=auto --bookies-file=bookies.txt --output-dir=EMC
+          else
+            echo "📁 EMC directory found – running in fetch mode with baking"
+            go run main.go --mode=fetch --bookies-file=bookies.txt --output-dir=EMC --bake-overrides
+          fi
+
+      - name: Check for changes in EMC/ 🔍
+        id: emc_changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add EMC/
+          if git diff --cached --quiet; then
+            echo "changes=false" >> $GITHUB_ENV
+          else
+            git commit -m "chore: update configs in EMC/ and reports"
+            git push origin secondary
+            echo "changes=true" >> $GITHUB_ENV
+          fi
+
+      - name: Create pull request 📬
+        if: env.changes == 'true'
+        id: cpr
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: "Update EMC configs - $(date +'%Y-%m-%d %H:%M UTC')"
+          body: "Automated update of configuration files and reports in EMC/"
+          base: main
+          head: secondary
+
+      - name: Add PR comment with diff 💬
+        if: steps.cpr.outputs.pull-request-number
+        run: |
+          echo "### EMC Config & Report Changes" > pr_comment.md
+          echo "" >> pr_comment.md
+          echo "\`\`\`diff" >> pr_comment.md
+          git diff HEAD^ HEAD EMC/ >> pr_comment.md
+          echo "\`\`\`" >> pr_comment.md
+
+          gh pr comment ${{ steps.cpr.outputs.pull-request-number }} \
+            --body-file pr_comment.md
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish report to Wiki 📚
+        uses: ./.github/actions/publish-wiki
+        with:
+          output-dir: EMC
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+

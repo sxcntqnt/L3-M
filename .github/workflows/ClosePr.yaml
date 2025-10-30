@@ -1,0 +1,21 @@
+name: Close Config PR Conversation
+
+on:
+  pull_request:
+    types:
+      - closed
+
+permissions:
+  pull-requests: write
+
+jobs:
+  close-conversation:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment on merged PR
+        run: |
+          gh pr comment ${{ github.event.pull_request.number }} \
+            --body "✅ Config updates merged into main. Closing conversation."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

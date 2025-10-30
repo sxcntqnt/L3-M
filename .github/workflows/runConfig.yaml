@@ -43,7 +43,7 @@ jobs:
           if [ ! -f go.mod ]; then
             go mod init diago
           fi
-          go get gopkg.in/yaml.v3
+          go get gopkg.in/yaml.v3@v3.0.1
           go mod tidy
 
       - name: Ensure output directory exists 📁

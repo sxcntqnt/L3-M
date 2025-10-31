@@ -5,19 +5,243 @@
       "url": "https://lite.betgr8.com/ke/?force=1#/",
       "results": [
         {
-          "label": "BetHistory",
+          "label": "Login.UsernameInput",
           "status": "❌"
         },
         {
-          "label": "UsernameInput",
+          "label": "Login.PasswordInput",
           "status": "❌"
         },
         {
-          "label": "SportDropdown",
+          "label": "Login.LoginButton",
           "status": "❌"
         },
         {
-          "label": "Totals",
+          "label": "Session.LogoutButton",
+          "status": "❌"
+        },
+        {
+          "label": "Session.SessionUserInfo",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.DatePicker",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.SearchButton",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventResults",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventItem",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventTitle",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventTeam",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Spread",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Totals",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.OddsDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.AddButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.RemoveButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.StakeInput",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.CalculateButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.ClearButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.PotentialPayout",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.BetSlipItem",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveBettingButton",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.OddsChangeIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveEventItem",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveScore",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveOddSelector",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveEvent",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.LineChangeIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.OddsHistory",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.BettingLines",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.MarketTypeDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.TimeFilter",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.ResetFiltersButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.ConfirmButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.ErrorMessage",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.SuccessMessage",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.BetSummary",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.HistoryPageLink",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.BetRowSelector",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.EventColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.StakeColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.OutcomeColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.FilterByResult",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.FilterByMarket",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.PromotionBanner",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.RedeemButton",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.PromoCodeInput",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.ApplyPromoButton",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CashOutButton",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.OpenBet",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CancellableBetIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CashoutOffer",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.ConfirmCashoutButton",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationPopup",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.DismissButton",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationMessage",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationType",
           "status": "❌"
         },
         {
@@ -25,31 +249,7 @@
           "status": "❌"
         },
         {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "PasswordInput",
-          "status": "❌"
-        },
-        {
-          "label": "LoginButton",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
-          "status": "❌"
-        },
-        {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
-          "label": "Spread",
+          "label": "BetHistory",
           "status": "❌"
         }
       ],
@@ -60,47 +260,247 @@
       "url": "https://www.betway.com",
       "results": [
         {
-          "label": "LoginButton",
+          "label": "Login.UsernameInput",
           "status": "❌"
         },
         {
-          "label": "DatePicker",
+          "label": "Login.PasswordInput",
           "status": "❌"
         },
         {
-          "label": "SearchButton",
+          "label": "Login.LoginButton",
           "status": "❌"
         },
         {
-          "label": "Moneyline",
+          "label": "Session.LogoutButton",
           "status": "❌"
         },
         {
-          "label": "Totals",
+          "label": "Session.SessionUserInfo",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.DatePicker",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.SearchButton",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventResults",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventItem",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventTitle",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventTeam",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Spread",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Totals",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.OddsDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.AddButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.RemoveButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.StakeInput",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.CalculateButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.ClearButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.PotentialPayout",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.BetSlipItem",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveBettingButton",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.OddsChangeIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveEventItem",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveScore",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveOddSelector",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveEvent",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.LineChangeIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.OddsHistory",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.BettingLines",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.MarketTypeDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.TimeFilter",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.ResetFiltersButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.ConfirmButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.ErrorMessage",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.SuccessMessage",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.BetSummary",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.HistoryPageLink",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.BetRowSelector",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.EventColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.StakeColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.OutcomeColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.FilterByResult",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.FilterByMarket",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.PromotionBanner",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.RedeemButton",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.PromoCodeInput",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.ApplyPromoButton",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CashOutButton",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.OpenBet",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CancellableBetIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CashoutOffer",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.ConfirmCashoutButton",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationPopup",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.DismissButton",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationMessage",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationType",
           "status": "❌"
         },
         {
           "label": "BetButton",
-          "status": "❌"
-        },
-        {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "UsernameInput",
-          "status": "❌"
-        },
-        {
-          "label": "PasswordInput",
-          "status": "❌"
-        },
-        {
-          "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
-          "label": "Spread",
           "status": "❌"
         },
         {
@@ -137,15 +537,243 @@
       "url": "https://www.ligibet.com",
       "results": [
         {
-          "label": "SearchButton",
+          "label": "Login.UsernameInput",
           "status": "❌"
         },
         {
-          "label": "Spread",
+          "label": "Login.PasswordInput",
           "status": "❌"
         },
         {
-          "label": "Totals",
+          "label": "Login.LoginButton",
+          "status": "❌"
+        },
+        {
+          "label": "Session.LogoutButton",
+          "status": "❌"
+        },
+        {
+          "label": "Session.SessionUserInfo",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.DatePicker",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.SearchButton",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventResults",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventItem",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventTitle",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventTeam",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Spread",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Totals",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.OddsDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.AddButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.RemoveButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.StakeInput",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.CalculateButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.ClearButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.PotentialPayout",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.BetSlipItem",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveBettingButton",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.OddsChangeIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveEventItem",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveScore",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveOddSelector",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveEvent",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.LineChangeIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.OddsHistory",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.BettingLines",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.MarketTypeDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.TimeFilter",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.ResetFiltersButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.ConfirmButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.ErrorMessage",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.SuccessMessage",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.BetSummary",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.HistoryPageLink",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.BetRowSelector",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.EventColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.StakeColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.OutcomeColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.FilterByResult",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.FilterByMarket",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.PromotionBanner",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.RedeemButton",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.PromoCodeInput",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.ApplyPromoButton",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CashOutButton",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.OpenBet",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CancellableBetIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CashoutOffer",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.ConfirmCashoutButton",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationPopup",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.DismissButton",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationMessage",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationType",
           "status": "❌"
         },
         {
@@ -154,34 +782,6 @@
         },
         {
           "label": "BetHistory",
-          "status": "❌"
-        },
-        {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "PasswordInput",
-          "status": "❌"
-        },
-        {
-          "label": "LoginButton",
-          "status": "❌"
-        },
-        {
-          "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
-          "label": "UsernameInput",
           "status": "❌"
         }
       ],
@@ -214,51 +814,251 @@
       "url": "https://www.sportybet.com/int/sport/football/live_list",
       "results": [
         {
+          "label": "Login.UsernameInput",
+          "status": "❌"
+        },
+        {
+          "label": "Login.PasswordInput",
+          "status": "❌"
+        },
+        {
+          "label": "Login.LoginButton",
+          "status": "❌"
+        },
+        {
+          "label": "Session.LogoutButton",
+          "status": "❌"
+        },
+        {
+          "label": "Session.SessionUserInfo",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.DatePicker",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.SearchButton",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventResults",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventItem",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventTitle",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventTeam",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Spread",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Totals",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.OddsDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.AddButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.RemoveButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.StakeInput",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.CalculateButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.ClearButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.PotentialPayout",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.BetSlipItem",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveBettingButton",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.OddsChangeIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveEventItem",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveScore",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveOddSelector",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveEvent",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.LineChangeIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.OddsHistory",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.BettingLines",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.MarketTypeDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.TimeFilter",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.ResetFiltersButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.ConfirmButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.ErrorMessage",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.SuccessMessage",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.BetSummary",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.HistoryPageLink",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.BetRowSelector",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.EventColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.StakeColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.OutcomeColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.FilterByResult",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.FilterByMarket",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.PromotionBanner",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.RedeemButton",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.PromoCodeInput",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.ApplyPromoButton",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CashOutButton",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.OpenBet",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CancellableBetIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CashoutOffer",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.ConfirmCashoutButton",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationPopup",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.DismissButton",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationMessage",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationType",
+          "status": "❌"
+        },
+        {
           "label": "BetButton",
           "status": "❌"
         },
         {
-          "label": "UsernameInput",
-          "status": "❌"
-        },
-        {
-          "label": "PasswordInput",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
-          "label": "Totals",
-          "status": "❌"
-        },
-        {
           "label": "BetHistory",
-          "status": "❌"
-        },
-        {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "LoginButton",
-          "status": "❌"
-        },
-        {
-          "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
-          "status": "❌"
-        },
-        {
-          "label": "Spread",
           "status": "❌"
         }
       ],
@@ -271,19 +1071,243 @@
       "url": "https://lite.betgr8.com/ke/?force=1#/",
       "results": [
         {
-          "label": "BetHistory",
+          "label": "Login.UsernameInput",
           "status": "❌"
         },
         {
-          "label": "UsernameInput",
+          "label": "Login.PasswordInput",
           "status": "❌"
         },
         {
-          "label": "SportDropdown",
+          "label": "Login.LoginButton",
           "status": "❌"
         },
         {
-          "label": "Totals",
+          "label": "Session.LogoutButton",
+          "status": "❌"
+        },
+        {
+          "label": "Session.SessionUserInfo",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.DatePicker",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.SearchButton",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventResults",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventItem",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventTitle",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventTeam",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Spread",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Totals",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.OddsDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.AddButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.RemoveButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.StakeInput",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.CalculateButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.ClearButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.PotentialPayout",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.BetSlipItem",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveBettingButton",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.OddsChangeIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveEventItem",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveScore",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveOddSelector",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveEvent",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.LineChangeIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.OddsHistory",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.BettingLines",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.MarketTypeDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.TimeFilter",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.ResetFiltersButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.ConfirmButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.ErrorMessage",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.SuccessMessage",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.BetSummary",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.HistoryPageLink",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.BetRowSelector",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.EventColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.StakeColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.OutcomeColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.FilterByResult",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.FilterByMarket",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.PromotionBanner",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.RedeemButton",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.PromoCodeInput",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.ApplyPromoButton",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CashOutButton",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.OpenBet",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CancellableBetIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CashoutOffer",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.ConfirmCashoutButton",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationPopup",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.DismissButton",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationMessage",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationType",
           "status": "❌"
         },
         {
@@ -291,31 +1315,7 @@
           "status": "❌"
         },
         {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "PasswordInput",
-          "status": "❌"
-        },
-        {
-          "label": "LoginButton",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
-          "status": "❌"
-        },
-        {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
-          "label": "Spread",
+          "label": "BetHistory",
           "status": "❌"
         }
       ],
@@ -326,47 +1326,247 @@
       "url": "https://www.betway.com",
       "results": [
         {
-          "label": "LoginButton",
+          "label": "Login.UsernameInput",
           "status": "❌"
         },
         {
-          "label": "DatePicker",
+          "label": "Login.PasswordInput",
           "status": "❌"
         },
         {
-          "label": "SearchButton",
+          "label": "Login.LoginButton",
           "status": "❌"
         },
         {
-          "label": "Moneyline",
+          "label": "Session.LogoutButton",
           "status": "❌"
         },
         {
-          "label": "Totals",
+          "label": "Session.SessionUserInfo",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.DatePicker",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.SearchButton",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventResults",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventItem",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventTitle",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventTeam",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Spread",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Totals",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.OddsDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.AddButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.RemoveButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.StakeInput",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.CalculateButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.ClearButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.PotentialPayout",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.BetSlipItem",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveBettingButton",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.OddsChangeIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveEventItem",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveScore",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveOddSelector",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveEvent",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.LineChangeIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.OddsHistory",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.BettingLines",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.MarketTypeDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.TimeFilter",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.ResetFiltersButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.ConfirmButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.ErrorMessage",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.SuccessMessage",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.BetSummary",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.HistoryPageLink",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.BetRowSelector",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.EventColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.StakeColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.OutcomeColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.FilterByResult",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.FilterByMarket",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.PromotionBanner",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.RedeemButton",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.PromoCodeInput",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.ApplyPromoButton",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CashOutButton",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.OpenBet",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CancellableBetIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CashoutOffer",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.ConfirmCashoutButton",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationPopup",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.DismissButton",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationMessage",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationType",
           "status": "❌"
         },
         {
           "label": "BetButton",
-          "status": "❌"
-        },
-        {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "UsernameInput",
-          "status": "❌"
-        },
-        {
-          "label": "PasswordInput",
-          "status": "❌"
-        },
-        {
-          "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
-          "label": "Spread",
           "status": "❌"
         },
         {
@@ -403,15 +1603,243 @@
       "url": "https://www.ligibet.com",
       "results": [
         {
-          "label": "SearchButton",
+          "label": "Login.UsernameInput",
           "status": "❌"
         },
         {
-          "label": "Spread",
+          "label": "Login.PasswordInput",
           "status": "❌"
         },
         {
-          "label": "Totals",
+          "label": "Login.LoginButton",
+          "status": "❌"
+        },
+        {
+          "label": "Session.LogoutButton",
+          "status": "❌"
+        },
+        {
+          "label": "Session.SessionUserInfo",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.DatePicker",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.SearchButton",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventResults",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventItem",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventTitle",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventTeam",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Spread",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Totals",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.OddsDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.AddButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.RemoveButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.StakeInput",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.CalculateButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.ClearButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.PotentialPayout",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.BetSlipItem",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveBettingButton",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.OddsChangeIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveEventItem",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveScore",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveOddSelector",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveEvent",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.LineChangeIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.OddsHistory",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.BettingLines",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.MarketTypeDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.TimeFilter",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.ResetFiltersButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.ConfirmButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.ErrorMessage",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.SuccessMessage",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.BetSummary",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.HistoryPageLink",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.BetRowSelector",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.EventColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.StakeColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.OutcomeColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.FilterByResult",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.FilterByMarket",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.PromotionBanner",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.RedeemButton",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.PromoCodeInput",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.ApplyPromoButton",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CashOutButton",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.OpenBet",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CancellableBetIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CashoutOffer",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.ConfirmCashoutButton",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationPopup",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.DismissButton",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationMessage",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationType",
           "status": "❌"
         },
         {
@@ -420,34 +1848,6 @@
         },
         {
           "label": "BetHistory",
-          "status": "❌"
-        },
-        {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "PasswordInput",
-          "status": "❌"
-        },
-        {
-          "label": "LoginButton",
-          "status": "❌"
-        },
-        {
-          "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
-          "label": "UsernameInput",
           "status": "❌"
         }
       ],
@@ -480,51 +1880,251 @@
       "url": "https://www.sportybet.com/int/sport/football/live_list",
       "results": [
         {
+          "label": "Login.UsernameInput",
+          "status": "❌"
+        },
+        {
+          "label": "Login.PasswordInput",
+          "status": "❌"
+        },
+        {
+          "label": "Login.LoginButton",
+          "status": "❌"
+        },
+        {
+          "label": "Session.LogoutButton",
+          "status": "❌"
+        },
+        {
+          "label": "Session.SessionUserInfo",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.DatePicker",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.SearchButton",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventResults",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventItem",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventTitle",
+          "status": "❌"
+        },
+        {
+          "label": "EventSearch.EventTeam",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Spread",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.Totals",
+          "status": "❌"
+        },
+        {
+          "label": "OddsSelector.OddsDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.AddButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.RemoveButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.StakeInput",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.CalculateButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.ClearButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.PotentialPayout",
+          "status": "❌"
+        },
+        {
+          "label": "BetSlip.BetSlipItem",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveBettingButton",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.OddsChangeIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveEventItem",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveScore",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveOddSelector",
+          "status": "❌"
+        },
+        {
+          "label": "LiveBetting.LiveEvent",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.LineChangeIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.OddsHistory",
+          "status": "❌"
+        },
+        {
+          "label": "LineMovement.BettingLines",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.MarketTypeDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.TimeFilter",
+          "status": "❌"
+        },
+        {
+          "label": "FilterOptions.ResetFiltersButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.ConfirmButton",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.ErrorMessage",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.SuccessMessage",
+          "status": "❌"
+        },
+        {
+          "label": "BetConfirmation.BetSummary",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.HistoryPageLink",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.BetRowSelector",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.EventColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.StakeColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.OutcomeColumn",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.FilterByResult",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory.FilterByMarket",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.PromotionBanner",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.RedeemButton",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.PromoCodeInput",
+          "status": "❌"
+        },
+        {
+          "label": "Promotions.ApplyPromoButton",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CashOutButton",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.OpenBet",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CancellableBetIndicator",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.CashoutOffer",
+          "status": "❌"
+        },
+        {
+          "label": "CashOut.ConfirmCashoutButton",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationPopup",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.DismissButton",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationMessage",
+          "status": "❌"
+        },
+        {
+          "label": "NotificationCenter.NotificationType",
+          "status": "❌"
+        },
+        {
           "label": "BetButton",
           "status": "❌"
         },
         {
-          "label": "UsernameInput",
-          "status": "❌"
-        },
-        {
-          "label": "PasswordInput",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
-          "label": "Totals",
-          "status": "❌"
-        },
-        {
           "label": "BetHistory",
-          "status": "❌"
-        },
-        {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "LoginButton",
-          "status": "❌"
-        },
-        {
-          "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
-          "status": "❌"
-        },
-        {
-          "label": "Spread",
           "status": "❌"
         }
       ],

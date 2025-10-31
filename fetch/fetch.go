@@ -2,60 +2,53 @@ package fetch
 
 import (
 	"fmt"
+	"net/http"
+	"net/url"
+	"reflect"
 	"sync"
-        "time"
+	"time"
 
 	"diago/config"
 	"diago/report"
 
 	"github.com/PuerkitoBio/goquery"
-	"net/http"
-	"net/url"
 )
 
-// FetchPage fetches the page and returns a goquery document
-// FetchPage fetches the page from the given URL and returns a goquery document.
+// FetchPage fetches a URL and returns a parsed goquery document.
 func FetchPage(urlStr string) (*goquery.Document, error) {
-    // Parse and clean URL
-    parsedURL, err := url.Parse(urlStr)
-    if err != nil {
-        return nil, fmt.Errorf("failed to parse URL %q: %w", urlStr, err)
-    }
-    parsedURL.Fragment = ""
+	parsedURL, err := url.Parse(urlStr)
+	if err != nil {
+		return nil, fmt.Errorf("failed to parse URL %q: %w", urlStr, err)
+	}
+	parsedURL.Fragment = ""
 
-    // Custom HTTP client with timeout
-    client := &http.Client{
-        Timeout: 10 * time.Second,
-    }
+	client := &http.Client{Timeout: 10 * time.Second}
 
-    // Create HTTP request with headers (some sites require a user-agent)
-    req, err := http.NewRequest("GET", parsedURL.String(), nil)
-    if err != nil {
-        return nil, fmt.Errorf("failed to create request for %q: %w", parsedURL.String(), err)
-    }
-    req.Header.Set("User-Agent", "Mozilla/5.0 (compatible; FetchBot/1.0; +https://yourdomain.com/bot)")
+	req, err := http.NewRequest("GET", parsedURL.String(), nil)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create request for %q: %w", parsedURL.String(), err)
+	}
+	req.Header.Set("User-Agent", "Mozilla/5.0 (compatible; FetchBot/2.0; +https://yourdomain.com/bot)")
 
-    // Execute the request
-    resp, err := client.Do(req)
-    if err != nil {
-        return nil, fmt.Errorf("failed to fetch %q: %w", parsedURL.String(), err)
-    }
-    defer resp.Body.Close()
+	resp, err := client.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("failed to fetch %q: %w", parsedURL.String(), err)
+	}
+	defer resp.Body.Close()
 
-    // Check for HTTP errors
-    if resp.StatusCode < 200 || resp.StatusCode >= 300 {
-        return nil, fmt.Errorf("received HTTP %d for %q", resp.StatusCode, parsedURL.String())
-    }
+	if resp.StatusCode < 200 || resp.StatusCode >= 300 {
+		return nil, fmt.Errorf("received HTTP %d for %q", resp.StatusCode, parsedURL.String())
+	}
 
-    // Parse the response body into a goquery document
-    doc, err := goquery.NewDocumentFromReader(resp.Body)
-    if err != nil {
-        return nil, fmt.Errorf("failed to parse response from %q: %w", parsedURL.String(), err)
-    }
+	doc, err := goquery.NewDocumentFromReader(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("failed to parse response from %q: %w", parsedURL.String(), err)
+	}
 
-    return doc, nil
+	return doc, nil
 }
-// VerifyBookieWithConfig checks all selectors from a config.Sportsbook
+
+// VerifyBookieWithConfig checks all selectors dynamically from config.Sportsbook
 func VerifyBookieWithConfig(name, url string, cfg *config.Sportsbook) report.BookieReport {
 	fmt.Printf("🔍 Checking %s at %s...\n", name, url)
 
@@ -72,23 +65,15 @@ func VerifyBookieWithConfig(name, url string, cfg *config.Sportsbook) report.Boo
 	results := []report.SelectorResult{}
 	allPass := true
 
-	checks := map[string]string{
-		"UsernameInput": cfg.Selectors.Login.UsernameInput,
-		"PasswordInput": cfg.Selectors.Login.PasswordInput,
-		"LoginButton":   cfg.Selectors.Login.LoginButton,
-		"SportDropdown": cfg.Selectors.EventSearch.SportDropdown,
-		"DatePicker":    cfg.Selectors.EventSearch.DatePicker,
-		"SearchButton":  cfg.Selectors.EventSearch.SearchButton,
-		"Moneyline":     cfg.Selectors.OddsSelector.Moneyline,
-		"Spread":        cfg.Selectors.OddsSelector.Spread,
-		"Totals":        cfg.Selectors.OddsSelector.Totals,
-		"BetButton":     cfg.BetButton,
-		"BetHistory":    cfg.BetHistory,
-		"LiveEvent":     cfg.Selectors.LiveBetting.LiveEvent,
-		"InPlayBetBtn":  cfg.Selectors.LiveBetting.InPlayBetButton,
-	}
+	// Traverse all selector fields dynamically via reflection
+	traverseSelectors(reflect.ValueOf(cfg.Selectors), "", doc, &results, &allPass)
 
-	for label, selector := range checks {
+	// Also check top-level selectors if present
+	topLevelChecks := map[string]string{
+		"BetButton":  cfg.BetButton,
+		"BetHistory": cfg.BetHistory,
+	}
+	for label, selector := range topLevelChecks {
 		if selector == "" {
 			continue
 		}
@@ -108,7 +93,44 @@ func VerifyBookieWithConfig(name, url string, cfg *config.Sportsbook) report.Boo
 	}
 }
 
-// VerifyBookiesConcurrently fetches multiple bookies concurrently
+// traverseSelectors recursively inspects nested structs and verifies each selector
+func traverseSelectors(v reflect.Value, prefix string, doc *goquery.Document, results *[]report.SelectorResult, allPass *bool) {
+	v = reflect.Indirect(v)
+	if !v.IsValid() {
+		return
+	}
+
+	t := v.Type()
+	for i := 0; i < v.NumField(); i++ {
+		field := v.Field(i)
+		fieldType := t.Field(i)
+		label := fieldType.Name
+
+		// Build hierarchical labels like "Login.UsernameInput"
+		fullLabel := label
+		if prefix != "" {
+			fullLabel = prefix + "." + label
+		}
+
+		switch field.Kind() {
+		case reflect.String:
+			selector := field.String()
+			if selector == "" {
+				continue
+			}
+			if doc.Find(selector).Length() > 0 {
+				*results = append(*results, report.SelectorResult{Label: fullLabel, Status: "✅"})
+			} else {
+				*results = append(*results, report.SelectorResult{Label: fullLabel, Status: "❌"})
+				*allPass = false
+			}
+		case reflect.Struct:
+			traverseSelectors(field, fullLabel, doc, results, allPass)
+		}
+	}
+}
+
+// VerifyBookiesConcurrently fetches multiple bookies concurrently.
 func VerifyBookiesConcurrently(bookies []*config.Sportsbook) report.FullReport {
 	var wg sync.WaitGroup
 	resultsCh := make(chan report.BookieReport, len(bookies))
@@ -126,14 +148,12 @@ func VerifyBookiesConcurrently(bookies []*config.Sportsbook) report.FullReport {
 	close(resultsCh)
 
 	var summary []report.BookieReport
-	var details []report.BookieReport
 	for r := range resultsCh {
-		details = append(details, r)
 		summary = append(summary, r)
 	}
 
 	return report.FullReport{
 		Summary: summary,
-		Details: details,
+		Details: summary,
 	}
 }

@@ -75,8 +75,8 @@
 - NotificationCenter.DismissButton: ❌
 - NotificationCenter.NotificationMessage: ❌
 - NotificationCenter.NotificationType: ❌
-- BetHistory: ❌
 - BetButton: ❌
+- BetHistory: ❌
 Overall: ❌ Failed
 
 ## betway (https://www.betway.com)
@@ -145,7 +145,7 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)
-- Fetch error: failed to fetch "https://www.dimbakenya.com/": Get "https://www.dimbakenya.com/": dial tcp: lookup www.dimbakenya.com on 127.0.0.11:53: no such host
+- Fetch error: failed to fetch "https://www.dimbakenya.com/": Get "https://www.dimbakenya.com/": dial tcp: lookup www.dimbakenya.com on 127.0.0.53:53: no such host
 Overall: ❌ Failed
 
 ## inbetkenya (https://www.inbetkenya.co.ke/index.php?action=sport&tz=3.0&set_default_tz=1)
@@ -218,68 +218,7 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## parimatch (https://www.parimatch.com)
-- Login.UsernameInput: ❌
-- Login.PasswordInput: ❌
-- Login.LoginButton: ❌
-- Session.LogoutButton: ❌
-- Session.SessionUserInfo: ❌
-- EventSearch.SportDropdown: ❌
-- EventSearch.DatePicker: ❌
-- EventSearch.SearchButton: ❌
-- EventSearch.EventResults: ❌
-- EventSearch.EventItem: ❌
-- EventSearch.EventTitle: ❌
-- EventSearch.EventTeam: ❌
-- OddsSelector.Moneyline: ❌
-- OddsSelector.Spread: ❌
-- OddsSelector.Totals: ❌
-- OddsSelector.OddsDropdown: ❌
-- BetSlip.AddButton: ❌
-- BetSlip.RemoveButton: ❌
-- BetSlip.StakeInput: ❌
-- BetSlip.CalculateButton: ❌
-- BetSlip.ClearButton: ❌
-- BetSlip.PotentialPayout: ❌
-- BetSlip.BetSlipItem: ❌
-- LiveBetting.LiveBettingButton: ❌
-- LiveBetting.OddsChangeIndicator: ❌
-- LiveBetting.LiveEventItem: ❌
-- LiveBetting.LiveScore: ❌
-- LiveBetting.LiveOddSelector: ❌
-- LiveBetting.LiveEvent: ❌
-- LineMovement.LineChangeIndicator: ❌
-- LineMovement.OddsHistory: ❌
-- LineMovement.BettingLines: ❌
-- FilterOptions.SportDropdown: ❌
-- FilterOptions.MarketTypeDropdown: ❌
-- FilterOptions.TimeFilter: ❌
-- FilterOptions.ResetFiltersButton: ❌
-- BetConfirmation.ConfirmButton: ❌
-- BetConfirmation.ErrorMessage: ❌
-- BetConfirmation.SuccessMessage: ❌
-- BetConfirmation.BetSummary: ❌
-- BetHistory.HistoryPageLink: ❌
-- BetHistory.BetRowSelector: ❌
-- BetHistory.EventColumn: ❌
-- BetHistory.StakeColumn: ❌
-- BetHistory.OutcomeColumn: ❌
-- BetHistory.FilterByResult: ❌
-- BetHistory.FilterByMarket: ❌
-- Promotions.PromotionBanner: ❌
-- Promotions.RedeemButton: ❌
-- Promotions.PromoCodeInput: ❌
-- Promotions.ApplyPromoButton: ❌
-- CashOut.CashOutButton: ❌
-- CashOut.OpenBet: ❌
-- CashOut.CancellableBetIndicator: ❌
-- CashOut.CashoutOffer: ❌
-- CashOut.ConfirmCashoutButton: ❌
-- NotificationCenter.NotificationPopup: ❌
-- NotificationCenter.DismissButton: ❌
-- NotificationCenter.NotificationMessage: ❌
-- NotificationCenter.NotificationType: ❌
-- BetButton: ❌
-- BetHistory: ❌
+- Fetch error: received HTTP 403 for "https://www.parimatch.com"
 Overall: ❌ Failed
 
 ## saharagames (https://m-ke.saharagames.com/en)

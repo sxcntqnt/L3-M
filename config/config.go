@@ -82,6 +82,20 @@ type Selectors struct {
 		ResetFiltersButton string `yaml:"reset_filters_button"`
 	} `yaml:"filter_options"`
 
+	BalanceTracker struct {
+		BalancePageLink         string `yaml:"balance_page_link"`
+		BalanceContainer        string `yaml:"balance_container"`
+		CurrentBalanceField     string `yaml:"current_balance_field"`
+		AvailableBalanceField   string `yaml:"available_balance_field"`
+		PendingWithdrawalsField string `yaml:"pending_withdrawals_field"`
+		TransactionRowSelector  string `yaml:"transaction_row_selector"`
+		TransactionTypeColumn   string `yaml:"transaction_type_column"`
+		TransactionAmountColumn string `yaml:"transaction_amount_column"`
+		TransactionDateColumn   string `yaml:"transaction_date_column"`
+		FilterByType            string `yaml:"filter_by_type"`
+		FilterByDate            string `yaml:"filter_by_date"`
+	} `yaml:"balance_tracker"`
+
 	BetConfirmation struct {
 		ConfirmButton  string `yaml:"confirm_button"`
 		ErrorMessage   string `yaml:"error_message"`

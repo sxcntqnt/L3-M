@@ -160,8 +160,8 @@ Overall: ❌ Failed
 - NotificationCenter.DismissButton: ❌
 - NotificationCenter.NotificationMessage: ❌
 - NotificationCenter.NotificationType: ❌
-- BetButton: ❌
 - BetHistory: ❌
+- BetButton: ❌
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)

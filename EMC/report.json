@@ -588,11 +588,11 @@
           "status": "❌"
         },
         {
-          "label": "BetButton",
+          "label": "BetHistory",
           "status": "❌"
         },
         {
-          "label": "BetHistory",
+          "label": "BetButton",
           "status": "❌"
         }
       ],
@@ -1830,11 +1830,11 @@
           "status": "❌"
         },
         {
-          "label": "BetButton",
+          "label": "BetHistory",
           "status": "❌"
         },
         {
-          "label": "BetHistory",
+          "label": "BetButton",
           "status": "❌"
         }
       ],

@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-    "gopkg.in/yaml.v3"
+	"gopkg.in/yaml.v3"
 )
 
 // buildSportsbook constructs the Sportsbook struct with base settings and optional override
@@ -22,20 +22,59 @@ func buildSportsbook(bookie string, index int, baseURL, browserPath string, over
 		Region:      "KE", // Default region
 		Selectors: Selectors{
 			Login: struct {
-				UsernameInput string `yaml:"username_input"`
-				PasswordInput string `yaml:"password_input"`
-				LoginButton   string `yaml:"login_button"`
+				UsernameInput   string `yaml:"username_input"`
+				PasswordInput   string `yaml:"password_input"`
+				LoginButton     string `yaml:"login_button"`
+			        Modal struct {
+		   	            Enabled     bool   `yaml:"enabled"`
+			            Selector    string `yaml:"selector"`
+			            CloseButton string `yaml:"close_button"`
+			        } `yaml:"modal"`
+
+				OtpInput        string `yaml:"otp_input"`
+				OtpSubmitButton string `yaml:"otp_submit_button"`
 			}{
 				UsernameInput: "input#username",
 				PasswordInput: "input#password",
 				LoginButton:   "button#login",
+
+			        Modal: struct {
+        			    Enabled     bool   `yaml:"enabled"`
+       				    Selector    string `yaml:"selector"`
+     			            CloseButton string `yaml:"close_button"`
+        		}{
+         			    Enabled:     true,
+			            Selector:    "div#otpModal",
+			            CloseButton: "div#otpModal button.close",
+      			        },
+
+				OtpInput:        "input#otp",
+				OtpSubmitButton: "button#otpSubmit",
+			},
+
+			Dashboard: "div#dashboard", // placeholder until you set real selector
+
+			UserMenu: struct {
+				LogoutButton string `yaml:"logout_button"`
+				AccountLink  string `yaml:"account_link"`
+			}{
+				LogoutButton: "button#logout", // preserved from old Session.LogoutButton
+				AccountLink:  "a#account",     // placeholder
+			},
+
+			AccountForm: struct {
+				EmailInput string `yaml:"email_input"`
+				SaveButton string `yaml:"save_button"`
+			}{
+				EmailInput: "input#email", // placeholder
+				SaveButton: "button#save", // placeholder
 			},
 			Session: struct {
 				LogoutButton    string `yaml:"logout_button"`
 				SessionUserInfo string `yaml:"session_user_info"`
 			}{
-				LogoutButton:    "button#logout",
-				SessionUserInfo: "div#userInfo",
+				LogoutButton:    "button#logout", // from your original selectors
+				SessionUserInfo: "div#userInfo",  // from your original selectors
 			},
 			EventSearch: struct {
 				SportDropdown string `yaml:"sport_dropdown"`
@@ -55,14 +94,14 @@ func buildSportsbook(bookie string, index int, baseURL, browserPath string, over
 				EventTeam:     "div.event-team",
 			},
 			OddsSelector: struct {
-				Moneyline  string `yaml:"moneyline"`
-				Spread    string `yaml:"spread"`
-				Totals     string `yaml:"totals"`
+				Moneyline    string `yaml:"moneyline"`
+				Spread       string `yaml:"spread"`
+				Totals       string `yaml:"totals"`
 				OddsDropdown string `yaml:"odds_dropdown"`
 			}{
-				Moneyline:  "div.match-result",
-				Spread:     "div.over-under",
-				Totals:      "div.point-spread",
+				Moneyline:    "div.match-result",
+				Spread:       "div.over-under",
+				Totals:       "div.point-spread",
 				OddsDropdown: "select#odds",
 			},
 			BetSlip: struct {

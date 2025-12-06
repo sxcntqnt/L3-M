@@ -2,7 +2,6 @@ package config
 
 import "gopkg.in/yaml.v3"
 
-
 // Sportsbook represents a single bookie's configuration
 type Sportsbook struct {
 	Name            string          `yaml:"name"`
@@ -25,7 +24,28 @@ type Selectors struct {
 		UsernameInput string `yaml:"username_input"`
 		PasswordInput string `yaml:"password_input"`
 		LoginButton   string `yaml:"login_button"`
+		
+	        Modal struct {
+	            Enabled     bool   `yaml:"enabled"`
+        	    Selector    string `yaml:"selector"`
+        	    CloseButton string `yaml:"close_button"`
+        	} `yaml:"modal"`
+
+		OtpInput        string `yaml:"otp_input"`
+		OtpSubmitButton string `yaml:"otp_submit_button"`
 	} `yaml:"login"`
+
+	Dashboard string `yaml:"dashboard"`
+
+	UserMenu struct {
+		LogoutButton string `yaml:"logout_button"`
+		AccountLink  string `yaml:"account_link"`
+	} `yaml:"user_menu"`
+
+	AccountForm struct {
+		EmailInput string `yaml:"email_input"`
+		SaveButton string `yaml:"save_button"`
+	} `yaml:"account_form"`
 
 	Session struct {
 		LogoutButton    string `yaml:"logout_button"`
@@ -43,9 +63,9 @@ type Selectors struct {
 	} `yaml:"event_search"`
 
 	OddsSelector struct {
-		Moneyline  string `yaml:"moneyline"`
-		Spread    string `yaml:"spread"`
-		Totals     string `yaml:"totals"`
+		Moneyline    string `yaml:"moneyline"`
+		Spread       string `yaml:"spread"`
+		Totals       string `yaml:"totals"`
 		OddsDropdown string `yaml:"odds_dropdown"`
 	} `yaml:"odds_selector"`
 
@@ -167,4 +187,3 @@ func (sb *Sportsbook) ApplyOverrides(overrides map[string]interface{}) {
 	data, _ := yaml.Marshal(overrides)
 	_ = yaml.Unmarshal(data, sb)
 }
-

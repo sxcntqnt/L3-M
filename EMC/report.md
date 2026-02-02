@@ -18,30 +18,30 @@
 - SearchButton: ❌
 - Moneyline: ❌
 - Spread: ❌
-- BetButton: ❌
-- PasswordInput: ❌
-- LoginButton: ❌
-- SportDropdown: ❌
 - Totals: ❌
 - BetHistory: ❌
+- PasswordInput: ❌
+- LoginButton: ❌
+- BetButton: ❌
 - LiveEvent: ❌
 - UsernameInput: ❌
+- SportDropdown: ❌
 - DatePicker: ❌
 Overall: ❌ Failed
 
 ## betway (https://www.betway.com)
+- PasswordInput: ❌
 - LoginButton: ❌
-- SportDropdown: ❌
-- DatePicker: ❌
-- SearchButton: ❌
 - Moneyline: ❌
 - Spread: ❌
 - Totals: ❌
-- UsernameInput: ❌
+- SportDropdown: ❌
+- DatePicker: ❌
+- SearchButton: ❌
 - BetButton: ❌
 - BetHistory: ❌
 - LiveEvent: ❌
-- PasswordInput: ❌
+- UsernameInput: ❌
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)
@@ -53,17 +53,17 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## ligibet (https://www.ligibet.com)
-- SportDropdown: ❌
-- DatePicker: ❌
-- Totals: ❌
 - PasswordInput: ❌
-- LoginButton: ❌
+- SportDropdown: ❌
 - SearchButton: ❌
 - Moneyline: ❌
-- Spread: ❌
 - BetButton: ❌
-- BetHistory: ❌
 - LiveEvent: ❌
+- LoginButton: ❌
+- DatePicker: ❌
+- Spread: ❌
+- Totals: ❌
+- BetHistory: ❌
 - UsernameInput: ❌
 Overall: ❌ Failed
 
@@ -76,17 +76,6 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## sportybet (https://www.sportybet.com/int/sport/football/live_list)
-- LoginButton: ❌
-- SportDropdown: ❌
-- DatePicker: ❌
-- SearchButton: ❌
-- BetButton: ❌
-- Moneyline: ❌
-- Spread: ❌
-- Totals: ❌
-- BetHistory: ❌
-- LiveEvent: ❌
-- UsernameInput: ❌
-- PasswordInput: ❌
+- Fetch error: received HTTP 403 for "https://www.sportybet.com/int/sport/football/live_list"
 Overall: ❌ Failed
 

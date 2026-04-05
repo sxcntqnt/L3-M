@@ -9,11 +9,19 @@
           "status": "❌"
         },
         {
+          "label": "LoginButton",
+          "status": "❌"
+        },
+        {
+          "label": "SportDropdown",
+          "status": "❌"
+        },
+        {
           "label": "DatePicker",
           "status": "❌"
         },
         {
-          "label": "SearchButton",
+          "label": "Moneyline",
           "status": "❌"
         },
         {
@@ -21,7 +29,7 @@
           "status": "❌"
         },
         {
-          "label": "BetButton",
+          "label": "BetHistory",
           "status": "❌"
         },
         {
@@ -33,11 +41,26 @@
           "status": "❌"
         },
         {
-          "label": "LoginButton",
+          "label": "SearchButton",
           "status": "❌"
         },
         {
-          "label": "SportDropdown",
+          "label": "Spread",
+          "status": "❌"
+        },
+        {
+          "label": "BetButton",
+          "status": "❌"
+        }
+      ],
+      "all_pass": false
+    },
+    {
+      "name": "betway",
+      "url": "https://www.betway.com",
+      "results": [
+        {
+          "label": "SearchButton",
           "status": "❌"
         },
         {
@@ -49,38 +72,11 @@
           "status": "❌"
         },
         {
-          "label": "BetHistory",
-          "status": "❌"
-        }
-      ],
-      "all_pass": false
-    },
-    {
-      "name": "betway",
-      "url": "https://www.betway.com",
-      "results": [
-        {
           "label": "Totals",
           "status": "❌"
         },
         {
-          "label": "BetButton",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
           "label": "BetHistory",
-          "status": "❌"
-        },
-        {
-          "label": "LiveEvent",
           "status": "❌"
         },
         {
@@ -96,15 +92,19 @@
           "status": "❌"
         },
         {
+          "label": "DatePicker",
+          "status": "❌"
+        },
+        {
+          "label": "BetButton",
+          "status": "❌"
+        },
+        {
+          "label": "LiveEvent",
+          "status": "❌"
+        },
+        {
           "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
-          "status": "❌"
-        },
-        {
-          "label": "Spread",
           "status": "❌"
         }
       ],
@@ -141,11 +141,7 @@
           "status": "❌"
         },
         {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
-          "label": "Spread",
+          "label": "Totals",
           "status": "❌"
         },
         {
@@ -165,7 +161,11 @@
           "status": "❌"
         },
         {
-          "label": "Totals",
+          "label": "Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "Spread",
           "status": "❌"
         },
         {
@@ -214,19 +214,11 @@
       "url": "https://www.sportybet.com/int/sport/football/live_list",
       "results": [
         {
-          "label": "LiveEvent",
+          "label": "Moneyline",
           "status": "❌"
         },
         {
-          "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
+          "label": "Spread",
           "status": "❌"
         },
         {
@@ -238,11 +230,23 @@
           "status": "❌"
         },
         {
+          "label": "UsernameInput",
+          "status": "❌"
+        },
+        {
+          "label": "DatePicker",
+          "status": "❌"
+        },
+        {
+          "label": "SearchButton",
+          "status": "❌"
+        },
+        {
           "label": "BetHistory",
           "status": "❌"
         },
         {
-          "label": "UsernameInput",
+          "label": "LiveEvent",
           "status": "❌"
         },
         {
@@ -254,11 +258,7 @@
           "status": "❌"
         },
         {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
-          "label": "Spread",
+          "label": "SportDropdown",
           "status": "❌"
         }
       ],
@@ -275,11 +275,19 @@
           "status": "❌"
         },
         {
+          "label": "LoginButton",
+          "status": "❌"
+        },
+        {
+          "label": "SportDropdown",
+          "status": "❌"
+        },
+        {
           "label": "DatePicker",
           "status": "❌"
         },
         {
-          "label": "SearchButton",
+          "label": "Moneyline",
           "status": "❌"
         },
         {
@@ -287,7 +295,7 @@
           "status": "❌"
         },
         {
-          "label": "BetButton",
+          "label": "BetHistory",
           "status": "❌"
         },
         {
@@ -299,11 +307,26 @@
           "status": "❌"
         },
         {
-          "label": "LoginButton",
+          "label": "SearchButton",
           "status": "❌"
         },
         {
-          "label": "SportDropdown",
+          "label": "Spread",
+          "status": "❌"
+        },
+        {
+          "label": "BetButton",
+          "status": "❌"
+        }
+      ],
+      "all_pass": false
+    },
+    {
+      "name": "betway",
+      "url": "https://www.betway.com",
+      "results": [
+        {
+          "label": "SearchButton",
           "status": "❌"
         },
         {
@@ -315,38 +338,11 @@
           "status": "❌"
         },
         {
-          "label": "BetHistory",
-          "status": "❌"
-        }
-      ],
-      "all_pass": false
-    },
-    {
-      "name": "betway",
-      "url": "https://www.betway.com",
-      "results": [
-        {
           "label": "Totals",
           "status": "❌"
         },
         {
-          "label": "BetButton",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
           "label": "BetHistory",
-          "status": "❌"
-        },
-        {
-          "label": "LiveEvent",
           "status": "❌"
         },
         {
@@ -362,15 +358,19 @@
           "status": "❌"
         },
         {
+          "label": "DatePicker",
+          "status": "❌"
+        },
+        {
+          "label": "BetButton",
+          "status": "❌"
+        },
+        {
+          "label": "LiveEvent",
+          "status": "❌"
+        },
+        {
           "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
-          "status": "❌"
-        },
-        {
-          "label": "Spread",
           "status": "❌"
         }
       ],
@@ -407,11 +407,7 @@
           "status": "❌"
         },
         {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
-          "label": "Spread",
+          "label": "Totals",
           "status": "❌"
         },
         {
@@ -431,7 +427,11 @@
           "status": "❌"
         },
         {
-          "label": "Totals",
+          "label": "Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "Spread",
           "status": "❌"
         },
         {
@@ -480,19 +480,11 @@
       "url": "https://www.sportybet.com/int/sport/football/live_list",
       "results": [
         {
-          "label": "LiveEvent",
+          "label": "Moneyline",
           "status": "❌"
         },
         {
-          "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
-          "label": "DatePicker",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
+          "label": "Spread",
           "status": "❌"
         },
         {
@@ -504,11 +496,23 @@
           "status": "❌"
         },
         {
+          "label": "UsernameInput",
+          "status": "❌"
+        },
+        {
+          "label": "DatePicker",
+          "status": "❌"
+        },
+        {
+          "label": "SearchButton",
+          "status": "❌"
+        },
+        {
           "label": "BetHistory",
           "status": "❌"
         },
         {
-          "label": "UsernameInput",
+          "label": "LiveEvent",
           "status": "❌"
         },
         {
@@ -520,11 +524,7 @@
           "status": "❌"
         },
         {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
-          "label": "Spread",
+          "label": "SportDropdown",
           "status": "❌"
         }
       ],

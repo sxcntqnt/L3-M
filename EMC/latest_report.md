@@ -93,8 +93,8 @@
 - NotificationCenter.DismissButton: ❌
 - NotificationCenter.NotificationMessage: ❌
 - NotificationCenter.NotificationType: ❌
-- BetButton: ❌
 - BetHistory: ❌
+- BetButton: ❌
 Overall: ❌ Failed
 
 ## betway (https://www.betway.com)
@@ -178,8 +178,8 @@ Overall: ❌ Failed
 - NotificationCenter.DismissButton: ❌
 - NotificationCenter.NotificationMessage: ❌
 - NotificationCenter.NotificationType: ❌
-- BetHistory: ❌
 - BetButton: ❌
+- BetHistory: ❌
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)
@@ -271,8 +271,8 @@ Overall: ❌ Failed
 - NotificationCenter.DismissButton: ❌
 - NotificationCenter.NotificationMessage: ❌
 - NotificationCenter.NotificationType: ❌
-- BetButton: ❌
 - BetHistory: ❌
+- BetButton: ❌
 Overall: ❌ Failed
 
 ## parimatch (https://www.parimatch.com)

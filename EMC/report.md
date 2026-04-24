@@ -16,32 +16,32 @@
 
 ## betgr8 (https://lite.betgr8.com/ke/?force=1#/)
 - PasswordInput: ❌
-- LoginButton: ❌
 - SportDropdown: ❌
-- DatePicker: ❌
 - SearchButton: ❌
+- LiveEvent: ❌
+- LoginButton: ❌
+- DatePicker: ❌
 - Moneyline: ❌
 - Spread: ❌
-- BetButton: ❌
-- UsernameInput: ❌
 - Totals: ❌
+- BetButton: ❌
 - BetHistory: ❌
-- LiveEvent: ❌
+- UsernameInput: ❌
 Overall: ❌ Failed
 
 ## betway (https://www.betway.com)
-- LiveEvent: ❌
-- UsernameInput: ❌
-- PasswordInput: ❌
-- SportDropdown: ❌
-- Spread: ❌
-- Totals: ❌
-- BetHistory: ❌
 - LoginButton: ❌
-- DatePicker: ❌
 - SearchButton: ❌
 - Moneyline: ❌
+- Spread: ❌
 - BetButton: ❌
+- BetHistory: ❌
+- UsernameInput: ❌
+- SportDropdown: ❌
+- DatePicker: ❌
+- Totals: ❌
+- LiveEvent: ❌
+- PasswordInput: ❌
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)
@@ -53,7 +53,7 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## ligibet (https://www.ligibet.com)
-- Fetch error: failed to fetch "https://www.ligibet.com": Get "https://www.ligibet.com": read tcp 10.1.0.114:58168->13.248.169.48:443: read: connection reset by peer
+- Fetch error: failed to fetch "https://www.ligibet.com": Get "https://www.ligibet.com": read tcp 10.1.0.193:35678->13.248.169.48:443: read: connection reset by peer
 Overall: ❌ Failed
 
 ## parimatch (https://www.parimatch.com)
@@ -65,6 +65,17 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## sportybet (https://www.sportybet.com/int/sport/football/live_list)
-- Fetch error: received HTTP 403 for "https://www.sportybet.com/int/sport/football/live_list"
+- UsernameInput: ❌
+- PasswordInput: ❌
+- SearchButton: ❌
+- Spread: ❌
+- BetButton: ❌
+- LoginButton: ❌
+- SportDropdown: ❌
+- DatePicker: ❌
+- Moneyline: ❌
+- Totals: ❌
+- BetHistory: ❌
+- LiveEvent: ❌
 Overall: ❌ Failed
 

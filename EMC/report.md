@@ -15,33 +15,33 @@
 ---
 
 ## betgr8 (https://lite.betgr8.com/ke/?force=1#/)
-- DatePicker: ❌
-- Totals: ❌
-- BetButton: ❌
-- LiveEvent: ❌
 - PasswordInput: ❌
-- SportDropdown: ❌
-- SearchButton: ❌
+- LoginButton: ❌
 - Moneyline: ❌
-- Spread: ❌
+- Totals: ❌
 - BetHistory: ❌
 - UsernameInput: ❌
-- LoginButton: ❌
+- SportDropdown: ❌
+- DatePicker: ❌
+- SearchButton: ❌
+- Spread: ❌
+- BetButton: ❌
+- LiveEvent: ❌
 Overall: ❌ Failed
 
 ## betway (https://www.betway.com)
+- SearchButton: ❌
+- Spread: ❌
+- Totals: ❌
+- BetButton: ❌
+- PasswordInput: ❌
+- Moneyline: ❌
+- BetHistory: ❌
 - LiveEvent: ❌
 - UsernameInput: ❌
 - LoginButton: ❌
-- DatePicker: ❌
-- SearchButton: ❌
-- Spread: ❌
-- BetHistory: ❌
-- PasswordInput: ❌
 - SportDropdown: ❌
-- Moneyline: ❌
-- Totals: ❌
-- BetButton: ❌
+- DatePicker: ❌
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)
@@ -53,18 +53,18 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## ligibet (https://www.ligibet.com)
-- DatePicker: ❌
-- BetHistory: ❌
-- LiveEvent: ❌
-- UsernameInput: ❌
-- LoginButton: ❌
-- SportDropdown: ❌
-- SearchButton: ❌
-- Moneyline: ❌
 - Spread: ❌
 - Totals: ❌
+- UsernameInput: ❌
 - BetButton: ❌
+- BetHistory: ❌
+- LiveEvent: ❌
 - PasswordInput: ❌
+- LoginButton: ❌
+- SportDropdown: ❌
+- DatePicker: ❌
+- SearchButton: ❌
+- Moneyline: ❌
 Overall: ❌ Failed
 
 ## parimatch (https://www.parimatch.com)
@@ -76,17 +76,17 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## sportybet (https://www.sportybet.com/int/sport/football/live_list)
+- PasswordInput: ❌
+- SportDropdown: ❌
 - DatePicker: ❌
-- Moneyline: ❌
+- SearchButton: ❌
 - BetButton: ❌
+- BetHistory: ❌
 - LiveEvent: ❌
 - LoginButton: ❌
-- SportDropdown: ❌
-- SearchButton: ❌
+- Moneyline: ❌
 - Spread: ❌
 - Totals: ❌
-- BetHistory: ❌
 - UsernameInput: ❌
-- PasswordInput: ❌
 Overall: ❌ Failed
 

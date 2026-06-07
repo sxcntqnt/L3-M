@@ -366,7 +366,7 @@ Overall: ❌ Failed
 - NotificationCenter.DismissButton: ❌
 - NotificationCenter.NotificationMessage: ❌
 - NotificationCenter.NotificationType: ❌
-- BetButton: ❌
 - BetHistory: ❌
+- BetButton: ❌
 Overall: ❌ Failed
 

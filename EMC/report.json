@@ -1374,11 +1374,11 @@
           "status": "❌"
         },
         {
-          "label": "BetHistory",
+          "label": "BetButton",
           "status": "❌"
         },
         {
-          "label": "BetButton",
+          "label": "BetHistory",
           "status": "❌"
         }
       ],
@@ -2760,11 +2760,11 @@
           "status": "❌"
         },
         {
-          "label": "BetHistory",
+          "label": "BetButton",
           "status": "❌"
         },
         {
-          "label": "BetButton",
+          "label": "BetHistory",
           "status": "❌"
         }
       ],

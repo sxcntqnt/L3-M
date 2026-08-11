@@ -15,22 +15,33 @@
 ---
 
 ## betgr8 (https://lite.betgr8.com/ke/?force=1#/)
+- SportDropdown: ❌
+- Moneyline: ❌
+- BetHistory: ❌
+- LiveEvent: ❌
 - UsernameInput: ❌
+- PasswordInput: ❌
+- LoginButton: ❌
+- DatePicker: ❌
+- SearchButton: ❌
+- Spread: ❌
+- Totals: ❌
+- BetButton: ❌
+Overall: ❌ Failed
+
+## betway (https://www.betway.com)
+- UsernameInput: ❌
+- PasswordInput: ❌
 - LoginButton: ❌
 - SportDropdown: ❌
 - DatePicker: ❌
 - SearchButton: ❌
+- BetHistory: ❌
+- LiveEvent: ❌
 - Moneyline: ❌
-- PasswordInput: ❌
 - Spread: ❌
 - Totals: ❌
 - BetButton: ❌
-- BetHistory: ❌
-- LiveEvent: ❌
-Overall: ❌ Failed
-
-## betway (https://www.betway.com)
-- Fetch error: failed to fetch "https://www.betway.com": Get "https://us.betway.com//?referral_source=Betway_com&referral_source=Betway_com&referral_source=Betway_com&referral_source=Betway_com&referral_source=Betway_com": stopped after 10 redirects
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)
@@ -42,22 +53,33 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## ligibet (https://www.ligibet.com)
-- LoginButton: ❌
-- DatePicker: ❌
-- Spread: ❌
 - BetButton: ❌
-- BetHistory: ❌
-- LiveEvent: ❌
 - UsernameInput: ❌
 - PasswordInput: ❌
+- LoginButton: ❌
+- BetHistory: ❌
+- LiveEvent: ❌
 - SportDropdown: ❌
+- DatePicker: ❌
 - SearchButton: ❌
 - Moneyline: ❌
+- Spread: ❌
 - Totals: ❌
 Overall: ❌ Failed
 
 ## parimatch (https://www.parimatch.com)
-- Fetch error: received HTTP 403 for "https://www.parimatch.com"
+- UsernameInput: ❌
+- LoginButton: ❌
+- SearchButton: ❌
+- Spread: ❌
+- Totals: ❌
+- BetHistory: ❌
+- LiveEvent: ❌
+- PasswordInput: ❌
+- SportDropdown: ❌
+- DatePicker: ❌
+- Moneyline: ❌
+- BetButton: ❌
 Overall: ❌ Failed
 
 ## saharagames (https://m-ke.saharagames.com/en)
@@ -70,12 +92,12 @@ Overall: ❌ Failed
 - BetHistory: ❌
 - LiveEvent: ❌
 - UsernameInput: ❌
-- LoginButton: ❌
-- SportDropdown: ❌
-- DatePicker: ❌
-- SearchButton: ❌
-- Moneyline: ❌
 - PasswordInput: ❌
+- LoginButton: ❌
+- DatePicker: ❌
+- Moneyline: ❌
+- SportDropdown: ❌
+- SearchButton: ❌
 - Spread: ❌
 Overall: ❌ Failed
 

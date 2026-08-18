@@ -18,30 +18,30 @@
 - UsernameInput: ❌
 - LoginButton: ❌
 - SportDropdown: ❌
-- DatePicker: ❌
-- SearchButton: ❌
 - Spread: ❌
 - BetButton: ❌
-- PasswordInput: ❌
-- Moneyline: ❌
-- Totals: ❌
 - BetHistory: ❌
 - LiveEvent: ❌
+- PasswordInput: ❌
+- DatePicker: ❌
+- SearchButton: ❌
+- Moneyline: ❌
+- Totals: ❌
 Overall: ❌ Failed
 
 ## betway (https://www.betway.com)
 - BetHistory: ❌
 - LiveEvent: ❌
 - LoginButton: ❌
-- SportDropdown: ❌
 - DatePicker: ❌
+- SearchButton: ❌
 - Moneyline: ❌
+- UsernameInput: ❌
+- PasswordInput: ❌
+- SportDropdown: ❌
 - Spread: ❌
 - Totals: ❌
 - BetButton: ❌
-- UsernameInput: ❌
-- PasswordInput: ❌
-- SearchButton: ❌
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)
@@ -53,22 +53,33 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## ligibet (https://www.ligibet.com)
-- Totals: ❌
-- BetHistory: ❌
-- LiveEvent: ❌
+- UsernameInput: ❌
 - PasswordInput: ❌
 - LoginButton: ❌
+- DatePicker: ❌
+- BetButton: ❌
+- BetHistory: ❌
+- LiveEvent: ❌
 - SportDropdown: ❌
 - SearchButton: ❌
 - Moneyline: ❌
 - Spread: ❌
-- BetButton: ❌
-- UsernameInput: ❌
-- DatePicker: ❌
+- Totals: ❌
 Overall: ❌ Failed
 
 ## parimatch (https://www.parimatch.com)
-- Fetch error: received HTTP 403 for "https://www.parimatch.com"
+- UsernameInput: ❌
+- PasswordInput: ❌
+- LoginButton: ❌
+- SportDropdown: ❌
+- SearchButton: ❌
+- Totals: ❌
+- BetHistory: ❌
+- DatePicker: ❌
+- Moneyline: ❌
+- Spread: ❌
+- BetButton: ❌
+- LiveEvent: ❌
 Overall: ❌ Failed
 
 ## saharagames (https://m-ke.saharagames.com/en)
@@ -76,17 +87,17 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## sportybet (https://www.sportybet.com/int/sport/football/live_list)
-- UsernameInput: ❌
+- BetButton: ❌
+- LiveEvent: ❌
 - PasswordInput: ❌
 - SportDropdown: ❌
+- DatePicker: ❌
 - SearchButton: ❌
+- Moneyline: ❌
+- BetHistory: ❌
+- UsernameInput: ❌
+- LoginButton: ❌
 - Spread: ❌
 - Totals: ❌
-- BetButton: ❌
-- BetHistory: ❌
-- LoginButton: ❌
-- DatePicker: ❌
-- Moneyline: ❌
-- LiveEvent: ❌
 Overall: ❌ Failed
 

@@ -15,33 +15,33 @@
 ---
 
 ## betgr8 (https://lite.betgr8.com/ke/?force=1#/)
-- DatePicker: ❌
+- UsernameInput: ❌
+- LoginButton: ❌
 - SearchButton: ❌
-- Moneyline: ❌
-- Spread: ❌
+- Totals: ❌
 - BetButton: ❌
+- BetHistory: ❌
 - LiveEvent: ❌
 - PasswordInput: ❌
-- LoginButton: ❌
-- Totals: ❌
-- BetHistory: ❌
-- UsernameInput: ❌
 - SportDropdown: ❌
+- DatePicker: ❌
+- Moneyline: ❌
+- Spread: ❌
 Overall: ❌ Failed
 
 ## betway (https://www.betway.com)
-- PasswordInput: ❌
 - LoginButton: ❌
 - SportDropdown: ❌
-- Moneyline: ❌
-- BetButton: ❌
-- BetHistory: ❌
+- LiveEvent: ❌
 - UsernameInput: ❌
 - DatePicker: ❌
 - SearchButton: ❌
+- Moneyline: ❌
 - Spread: ❌
 - Totals: ❌
-- LiveEvent: ❌
+- BetButton: ❌
+- BetHistory: ❌
+- PasswordInput: ❌
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)
@@ -53,33 +53,33 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## ligibet (https://www.ligibet.com)
+- Spread: ❌
 - BetButton: ❌
-- BetHistory: ❌
 - LiveEvent: ❌
 - UsernameInput: ❌
 - PasswordInput: ❌
+- Moneyline: ❌
+- Totals: ❌
+- BetHistory: ❌
 - LoginButton: ❌
 - SportDropdown: ❌
 - DatePicker: ❌
 - SearchButton: ❌
-- Moneyline: ❌
-- Spread: ❌
-- Totals: ❌
 Overall: ❌ Failed
 
 ## parimatch (https://www.parimatch.com)
-- LoginButton: ❌
-- SearchButton: ❌
 - Spread: ❌
 - Totals: ❌
-- BetButton: ❌
 - BetHistory: ❌
 - LiveEvent: ❌
+- LoginButton: ❌
+- DatePicker: ❌
+- Moneyline: ❌
+- BetButton: ❌
 - UsernameInput: ❌
 - PasswordInput: ❌
 - SportDropdown: ❌
-- DatePicker: ❌
-- Moneyline: ❌
+- SearchButton: ❌
 Overall: ❌ Failed
 
 ## saharagames (https://m-ke.saharagames.com/en)
@@ -87,17 +87,17 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## sportybet (https://www.sportybet.com/int/sport/football/live_list)
-- Spread: ❌
-- Totals: ❌
-- BetHistory: ❌
-- LiveEvent: ❌
-- UsernameInput: ❌
+- LoginButton: ❌
 - SportDropdown: ❌
+- DatePicker: ❌
 - SearchButton: ❌
 - BetButton: ❌
+- BetHistory: ❌
 - PasswordInput: ❌
-- LoginButton: ❌
-- DatePicker: ❌
 - Moneyline: ❌
+- Spread: ❌
+- Totals: ❌
+- LiveEvent: ❌
+- UsernameInput: ❌
 Overall: ❌ Failed
 

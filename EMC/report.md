@@ -15,33 +15,33 @@
 ---
 
 ## betgr8 (https://lite.betgr8.com/ke/?force=1#/)
-- Moneyline: ❌
-- Spread: ❌
-- BetButton: ❌
+- BetHistory: ❌
 - UsernameInput: ❌
 - PasswordInput: ❌
 - SportDropdown: ❌
-- DatePicker: ❌
+- SearchButton: ❌
+- Spread: ❌
 - Totals: ❌
-- BetHistory: ❌
+- BetButton: ❌
 - LiveEvent: ❌
 - LoginButton: ❌
-- SearchButton: ❌
+- DatePicker: ❌
+- Moneyline: ❌
 Overall: ❌ Failed
 
 ## betway (https://www.betway.com)
-- Totals: ❌
+- LoginButton: ❌
 - SearchButton: ❌
 - Moneyline: ❌
-- BetButton: ❌
+- Spread: ❌
 - BetHistory: ❌
-- LiveEvent: ❌
 - UsernameInput: ❌
-- PasswordInput: ❌
-- LoginButton: ❌
 - SportDropdown: ❌
 - DatePicker: ❌
-- Spread: ❌
+- Totals: ❌
+- BetButton: ❌
+- LiveEvent: ❌
+- PasswordInput: ❌
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)
@@ -55,31 +55,31 @@ Overall: ❌ Failed
 ## ligibet (https://www.ligibet.com)
 - UsernameInput: ❌
 - PasswordInput: ❌
-- LoginButton: ❌
 - SportDropdown: ❌
 - DatePicker: ❌
 - Spread: ❌
-- Totals: ❌
-- BetButton: ❌
+- BetHistory: ❌
+- LoginButton: ❌
 - SearchButton: ❌
 - Moneyline: ❌
-- BetHistory: ❌
+- Totals: ❌
+- BetButton: ❌
 - LiveEvent: ❌
 Overall: ❌ Failed
 
 ## parimatch (https://www.parimatch.com)
+- SportDropdown: ❌
+- SearchButton: ❌
+- Moneyline: ❌
+- Spread: ❌
 - BetButton: ❌
-- LiveEvent: ❌
-- PasswordInput: ❌
+- BetHistory: ❌
 - LoginButton: ❌
 - DatePicker: ❌
-- SearchButton: ❌
-- Spread: ❌
-- BetHistory: ❌
-- UsernameInput: ❌
-- SportDropdown: ❌
-- Moneyline: ❌
 - Totals: ❌
+- LiveEvent: ❌
+- UsernameInput: ❌
+- PasswordInput: ❌
 Overall: ❌ Failed
 
 ## saharagames (https://m-ke.saharagames.com/en)
@@ -87,17 +87,17 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## sportybet (https://www.sportybet.com/int/sport/football/live_list)
-- PasswordInput: ❌
+- Totals: ❌
 - SportDropdown: ❌
 - DatePicker: ❌
 - SearchButton: ❌
-- Spread: ❌
-- Totals: ❌
-- UsernameInput: ❌
-- LoginButton: ❌
 - Moneyline: ❌
+- Spread: ❌
 - BetButton: ❌
 - BetHistory: ❌
 - LiveEvent: ❌
+- UsernameInput: ❌
+- PasswordInput: ❌
+- LoginButton: ❌
 Overall: ❌ Failed
 

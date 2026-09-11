@@ -15,33 +15,33 @@
 ---
 
 ## betgr8 (https://lite.betgr8.com/ke/?force=1#/)
-- DatePicker: ❌
-- Moneyline: ❌
-- Totals: ❌
+- Spread: ❌
 - BetButton: ❌
 - BetHistory: ❌
 - UsernameInput: ❌
 - PasswordInput: ❌
-- LoginButton: ❌
 - SportDropdown: ❌
-- SearchButton: ❌
-- Spread: ❌
+- DatePicker: ❌
+- Totals: ❌
 - LiveEvent: ❌
+- LoginButton: ❌
+- SearchButton: ❌
+- Moneyline: ❌
 Overall: ❌ Failed
 
 ## betway (https://www.betway.com)
-- UsernameInput: ❌
 - PasswordInput: ❌
+- LoginButton: ❌
 - SportDropdown: ❌
 - SearchButton: ❌
-- Moneyline: ❌
 - Spread: ❌
-- LiveEvent: ❌
-- LoginButton: ❌
-- DatePicker: ❌
 - Totals: ❌
 - BetButton: ❌
 - BetHistory: ❌
+- UsernameInput: ❌
+- DatePicker: ❌
+- Moneyline: ❌
+- LiveEvent: ❌
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)
@@ -53,33 +53,33 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## ligibet (https://www.ligibet.com)
-- UsernameInput: ❌
-- SportDropdown: ❌
-- Spread: ❌
-- LiveEvent: ❌
 - PasswordInput: ❌
-- LoginButton: ❌
 - DatePicker: ❌
+- Spread: ❌
+- Totals: ❌
+- BetHistory: ❌
+- LoginButton: ❌
+- SportDropdown: ❌
 - SearchButton: ❌
 - Moneyline: ❌
-- Totals: ❌
 - BetButton: ❌
-- BetHistory: ❌
+- LiveEvent: ❌
+- UsernameInput: ❌
 Overall: ❌ Failed
 
 ## parimatch (https://www.parimatch.com)
-- BetButton: ❌
-- BetHistory: ❌
-- PasswordInput: ❌
-- DatePicker: ❌
-- Spread: ❌
-- LiveEvent: ❌
 - UsernameInput: ❌
 - LoginButton: ❌
 - SportDropdown: ❌
+- DatePicker: ❌
 - SearchButton: ❌
 - Moneyline: ❌
+- Spread: ❌
+- PasswordInput: ❌
 - Totals: ❌
+- BetButton: ❌
+- BetHistory: ❌
+- LiveEvent: ❌
 Overall: ❌ Failed
 
 ## saharagames (https://m-ke.saharagames.com/en)
@@ -87,17 +87,17 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## sportybet (https://www.sportybet.com/int/sport/football/live_list)
-- UsernameInput: ❌
+- PasswordInput: ❌
 - SportDropdown: ❌
-- DatePicker: ❌
-- SearchButton: ❌
 - Moneyline: ❌
 - Totals: ❌
+- BetButton: ❌
+- UsernameInput: ❌
+- LoginButton: ❌
+- DatePicker: ❌
+- SearchButton: ❌
+- Spread: ❌
 - BetHistory: ❌
 - LiveEvent: ❌
-- PasswordInput: ❌
-- LoginButton: ❌
-- Spread: ❌
-- BetButton: ❌
 Overall: ❌ Failed
 

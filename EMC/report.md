@@ -15,33 +15,33 @@
 ---
 
 ## betgr8 (https://lite.betgr8.com/ke/?force=1#/)
-- BetHistory: ❌
-- UsernameInput: ❌
-- LoginButton: ❌
-- DatePicker: ❌
-- Moneyline: ❌
 - LiveEvent: ❌
+- UsernameInput: ❌
 - PasswordInput: ❌
+- LoginButton: ❌
 - SportDropdown: ❌
-- SearchButton: ❌
-- Spread: ❌
+- DatePicker: ❌
 - Totals: ❌
+- BetHistory: ❌
+- SearchButton: ❌
+- Moneyline: ❌
+- Spread: ❌
 - BetButton: ❌
 Overall: ❌ Failed
 
 ## betway (https://www.betway.com)
-- DatePicker: ❌
 - Moneyline: ❌
-- Spread: ❌
-- Totals: ❌
-- SearchButton: ❌
-- BetButton: ❌
 - BetHistory: ❌
 - LiveEvent: ❌
-- UsernameInput: ❌
 - PasswordInput: ❌
-- LoginButton: ❌
 - SportDropdown: ❌
+- SearchButton: ❌
+- Spread: ❌
+- Totals: ❌
+- BetButton: ❌
+- UsernameInput: ❌
+- LoginButton: ❌
+- DatePicker: ❌
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)
@@ -53,33 +53,33 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## ligibet (https://www.ligibet.com)
-- Moneyline: ❌
-- Spread: ❌
-- Totals: ❌
-- BetButton: ❌
-- LiveEvent: ❌
 - PasswordInput: ❌
-- DatePicker: ❌
-- SearchButton: ❌
-- BetHistory: ❌
-- UsernameInput: ❌
 - LoginButton: ❌
 - SportDropdown: ❌
+- SearchButton: ❌
+- Moneyline: ❌
+- Spread: ❌
+- BetButton: ❌
+- BetHistory: ❌
+- UsernameInput: ❌
+- DatePicker: ❌
+- Totals: ❌
+- LiveEvent: ❌
 Overall: ❌ Failed
 
 ## parimatch (https://www.parimatch.com)
-- UsernameInput: ❌
 - PasswordInput: ❌
 - LoginButton: ❌
-- SearchButton: ❌
+- DatePicker: ❌
 - Moneyline: ❌
 - Spread: ❌
-- Totals: ❌
 - BetButton: ❌
 - SportDropdown: ❌
-- DatePicker: ❌
+- SearchButton: ❌
+- Totals: ❌
 - BetHistory: ❌
 - LiveEvent: ❌
+- UsernameInput: ❌
 Overall: ❌ Failed
 
 ## saharagames (https://m-ke.saharagames.com/en)
@@ -87,17 +87,17 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## sportybet (https://www.sportybet.com/int/sport/football/live_list)
-- Spread: ❌
-- BetButton: ❌
-- BetHistory: ❌
-- LiveEvent: ❌
 - UsernameInput: ❌
-- PasswordInput: ❌
 - LoginButton: ❌
 - SportDropdown: ❌
-- DatePicker: ❌
 - SearchButton: ❌
-- Moneyline: ❌
 - Totals: ❌
+- BetHistory: ❌
+- LiveEvent: ❌
+- PasswordInput: ❌
+- DatePicker: ❌
+- Moneyline: ❌
+- Spread: ❌
+- BetButton: ❌
 Overall: ❌ Failed
 

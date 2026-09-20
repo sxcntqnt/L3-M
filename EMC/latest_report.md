@@ -271,8 +271,8 @@ Overall: ❌ Failed
 - NotificationCenter.DismissButton: ❌
 - NotificationCenter.NotificationMessage: ❌
 - NotificationCenter.NotificationType: ❌
-- BetHistory: ❌
 - BetButton: ❌
+- BetHistory: ❌
 Overall: ❌ Failed
 
 ## parimatch (https://www.parimatch.com)

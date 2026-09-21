@@ -15,33 +15,33 @@
 ---
 
 ## betgr8 (https://lite.betgr8.com/ke/?force=1#/)
-- BetButton: ❌
 - UsernameInput: ❌
 - PasswordInput: ❌
-- DatePicker: ❌
-- Moneyline: ❌
-- BetHistory: ❌
-- LiveEvent: ❌
-- LoginButton: ❌
 - SportDropdown: ❌
-- SearchButton: ❌
+- Moneyline: ❌
 - Spread: ❌
 - Totals: ❌
+- BetButton: ❌
+- BetHistory: ❌
+- LoginButton: ❌
+- DatePicker: ❌
+- SearchButton: ❌
+- LiveEvent: ❌
 Overall: ❌ Failed
 
 ## betway (https://www.betway.com)
-- Totals: ❌
-- BetButton: ❌
-- UsernameInput: ❌
 - PasswordInput: ❌
-- DatePicker: ❌
-- SearchButton: ❌
-- BetHistory: ❌
-- LiveEvent: ❌
 - LoginButton: ❌
 - SportDropdown: ❌
+- SearchButton: ❌
 - Moneyline: ❌
+- BetButton: ❌
+- BetHistory: ❌
+- LiveEvent: ❌
+- UsernameInput: ❌
+- DatePicker: ❌
 - Spread: ❌
+- Totals: ❌
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)
@@ -53,33 +53,33 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## ligibet (https://www.ligibet.com)
+- Totals: ❌
+- LiveEvent: ❌
 - UsernameInput: ❌
 - PasswordInput: ❌
 - SportDropdown: ❌
 - DatePicker: ❌
-- SearchButton: ❌
 - Moneyline: ❌
 - Spread: ❌
+- BetButton: ❌
 - BetHistory: ❌
 - LoginButton: ❌
-- Totals: ❌
-- BetButton: ❌
-- LiveEvent: ❌
+- SearchButton: ❌
 Overall: ❌ Failed
 
 ## parimatch (https://www.parimatch.com)
-- Moneyline: ❌
-- Totals: ❌
-- LiveEvent: ❌
-- PasswordInput: ❌
-- LoginButton: ❌
-- SearchButton: ❌
 - Spread: ❌
+- Totals: ❌
 - BetButton: ❌
 - BetHistory: ❌
 - UsernameInput: ❌
+- PasswordInput: ❌
 - SportDropdown: ❌
 - DatePicker: ❌
+- LiveEvent: ❌
+- LoginButton: ❌
+- SearchButton: ❌
+- Moneyline: ❌
 Overall: ❌ Failed
 
 ## saharagames (https://m-ke.saharagames.com/en)
@@ -87,17 +87,17 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## sportybet (https://www.sportybet.com/int/sport/football/live_list)
-- LiveEvent: ❌
-- UsernameInput: ❌
+- PasswordInput: ❌
+- LoginButton: ❌
 - DatePicker: ❌
-- Spread: ❌
+- Moneyline: ❌
 - Totals: ❌
 - BetButton: ❌
 - BetHistory: ❌
-- PasswordInput: ❌
-- LoginButton: ❌
+- UsernameInput: ❌
 - SportDropdown: ❌
 - SearchButton: ❌
-- Moneyline: ❌
+- Spread: ❌
+- LiveEvent: ❌
 Overall: ❌ Failed
 

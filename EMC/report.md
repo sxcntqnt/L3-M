@@ -15,33 +15,33 @@
 ---
 
 ## betgr8 (https://lite.betgr8.com/ke/?force=1#/)
-- BetHistory: ❌
+- UsernameInput: ❌
 - PasswordInput: ❌
 - LoginButton: ❌
-- SportDropdown: ❌
 - SearchButton: ❌
+- Moneyline: ❌
 - Spread: ❌
+- BetButton: ❌
+- BetHistory: ❌
+- SportDropdown: ❌
+- DatePicker: ❌
 - Totals: ❌
 - LiveEvent: ❌
-- UsernameInput: ❌
-- DatePicker: ❌
-- Moneyline: ❌
-- BetButton: ❌
 Overall: ❌ Failed
 
 ## betway (https://www.betway.com)
-- UsernameInput: ❌
-- PasswordInput: ❌
-- DatePicker: ❌
-- Moneyline: ❌
+- SearchButton: ❌
 - Totals: ❌
+- BetHistory: ❌
+- PasswordInput: ❌
+- Moneyline: ❌
+- Spread: ❌
 - BetButton: ❌
 - LiveEvent: ❌
+- UsernameInput: ❌
 - LoginButton: ❌
 - SportDropdown: ❌
-- SearchButton: ❌
-- Spread: ❌
-- BetHistory: ❌
+- DatePicker: ❌
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)
@@ -53,33 +53,33 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## ligibet (https://www.ligibet.com)
-- UsernameInput: ❌
-- PasswordInput: ❌
-- LoginButton: ❌
-- DatePicker: ❌
 - SportDropdown: ❌
-- SearchButton: ❌
+- DatePicker: ❌
 - Moneyline: ❌
 - Spread: ❌
 - Totals: ❌
 - BetButton: ❌
 - BetHistory: ❌
+- UsernameInput: ❌
+- PasswordInput: ❌
+- LoginButton: ❌
+- SearchButton: ❌
 - LiveEvent: ❌
 Overall: ❌ Failed
 
 ## parimatch (https://www.parimatch.com)
-- Totals: ❌
-- LiveEvent: ❌
-- UsernameInput: ❌
 - LoginButton: ❌
 - DatePicker: ❌
+- SearchButton: ❌
 - Spread: ❌
-- BetButton: ❌
+- Totals: ❌
 - BetHistory: ❌
+- LiveEvent: ❌
+- UsernameInput: ❌
 - PasswordInput: ❌
 - SportDropdown: ❌
-- SearchButton: ❌
 - Moneyline: ❌
+- BetButton: ❌
 Overall: ❌ Failed
 
 ## saharagames (https://m-ke.saharagames.com/en)
@@ -87,17 +87,17 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## sportybet (https://www.sportybet.com/int/sport/football/live_list)
+- PasswordInput: ❌
+- Moneyline: ❌
 - Totals: ❌
-- BetButton: ❌
-- BetHistory: ❌
+- LiveEvent: ❌
+- UsernameInput: ❌
+- LoginButton: ❌
+- SportDropdown: ❌
 - DatePicker: ❌
 - SearchButton: ❌
 - Spread: ❌
-- LiveEvent: ❌
-- UsernameInput: ❌
-- PasswordInput: ❌
-- LoginButton: ❌
-- SportDropdown: ❌
-- Moneyline: ❌
+- BetButton: ❌
+- BetHistory: ❌
 Overall: ❌ Failed
 

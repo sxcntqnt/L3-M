@@ -15,33 +15,33 @@
 ---
 
 ## betgr8 (https://lite.betgr8.com/ke/?force=1#/)
-- PasswordInput: ❌
-- BetButton: ❌
+- Moneyline: ❌
 - BetHistory: ❌
 - LiveEvent: ❌
 - UsernameInput: ❌
 - LoginButton: ❌
-- SportDropdown: ❌
 - DatePicker: ❌
-- SearchButton: ❌
-- Moneyline: ❌
 - Spread: ❌
 - Totals: ❌
+- BetButton: ❌
+- PasswordInput: ❌
+- SportDropdown: ❌
+- SearchButton: ❌
 Overall: ❌ Failed
 
 ## betway (https://www.betway.com)
-- UsernameInput: ❌
-- SportDropdown: ❌
-- SearchButton: ❌
-- Moneyline: ❌
-- Spread: ❌
 - BetButton: ❌
-- BetHistory: ❌
+- LiveEvent: ❌
+- UsernameInput: ❌
 - PasswordInput: ❌
 - LoginButton: ❌
 - DatePicker: ❌
+- SearchButton: ❌
+- BetHistory: ❌
+- SportDropdown: ❌
+- Moneyline: ❌
+- Spread: ❌
 - Totals: ❌
-- LiveEvent: ❌
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)
@@ -53,33 +53,33 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## ligibet (https://www.ligibet.com)
-- BetButton: ❌
 - UsernameInput: ❌
+- PasswordInput: ❌
 - LoginButton: ❌
-- SportDropdown: ❌
+- DatePicker: ❌
 - Moneyline: ❌
-- Spread: ❌
 - Totals: ❌
 - BetHistory: ❌
-- LiveEvent: ❌
-- PasswordInput: ❌
-- DatePicker: ❌
+- SportDropdown: ❌
 - SearchButton: ❌
+- Spread: ❌
+- BetButton: ❌
+- LiveEvent: ❌
 Overall: ❌ Failed
 
 ## parimatch (https://www.parimatch.com)
+- Spread: ❌
 - Totals: ❌
+- UsernameInput: ❌
+- SearchButton: ❌
 - BetButton: ❌
-- PasswordInput: ❌
-- SportDropdown: ❌
 - BetHistory: ❌
 - LiveEvent: ❌
-- UsernameInput: ❌
+- PasswordInput: ❌
 - LoginButton: ❌
+- SportDropdown: ❌
 - DatePicker: ❌
-- SearchButton: ❌
 - Moneyline: ❌
-- Spread: ❌
 Overall: ❌ Failed
 
 ## saharagames (https://m-ke.saharagames.com/en)
@@ -87,17 +87,17 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## sportybet (https://www.sportybet.com/int/sport/football/live_list)
-- Spread: ❌
-- Totals: ❌
-- BetHistory: ❌
 - UsernameInput: ❌
 - LoginButton: ❌
-- SportDropdown: ❌
 - DatePicker: ❌
 - SearchButton: ❌
-- Moneyline: ❌
-- BetButton: ❌
+- Totals: ❌
+- BetHistory: ❌
 - LiveEvent: ❌
 - PasswordInput: ❌
+- SportDropdown: ❌
+- Moneyline: ❌
+- Spread: ❌
+- BetButton: ❌
 Overall: ❌ Failed
 

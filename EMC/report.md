@@ -15,33 +15,33 @@
 ---
 
 ## betgr8 (https://lite.betgr8.com/ke/?force=1#/)
-- PasswordInput: ❌
 - LoginButton: ❌
 - SportDropdown: ❌
+- SearchButton: ❌
+- Moneyline: ❌
+- Totals: ❌
+- LiveEvent: ❌
+- UsernameInput: ❌
 - DatePicker: ❌
 - Spread: ❌
 - BetButton: ❌
 - BetHistory: ❌
-- LiveEvent: ❌
-- UsernameInput: ❌
-- SearchButton: ❌
-- Moneyline: ❌
-- Totals: ❌
+- PasswordInput: ❌
 Overall: ❌ Failed
 
 ## betway (https://www.betway.com)
-- PasswordInput: ❌
-- SportDropdown: ❌
-- DatePicker: ❌
-- Moneyline: ❌
-- BetHistory: ❌
-- LiveEvent: ❌
-- UsernameInput: ❌
-- LoginButton: ❌
-- SearchButton: ❌
-- Spread: ❌
 - Totals: ❌
 - BetButton: ❌
+- UsernameInput: ❌
+- SportDropdown: ❌
+- SearchButton: ❌
+- Moneyline: ❌
+- Spread: ❌
+- BetHistory: ❌
+- LiveEvent: ❌
+- PasswordInput: ❌
+- LoginButton: ❌
+- DatePicker: ❌
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)
@@ -53,33 +53,33 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## ligibet (https://www.ligibet.com)
-- UsernameInput: ❌
+- LoginButton: ❌
 - SportDropdown: ❌
 - DatePicker: ❌
-- Moneyline: ❌
-- Spread: ❌
-- BetButton: ❌
-- PasswordInput: ❌
-- LoginButton: ❌
 - SearchButton: ❌
+- Moneyline: ❌
 - Totals: ❌
+- BetButton: ❌
 - BetHistory: ❌
+- UsernameInput: ❌
+- PasswordInput: ❌
+- Spread: ❌
 - LiveEvent: ❌
 Overall: ❌ Failed
 
 ## parimatch (https://www.parimatch.com)
 - LoginButton: ❌
+- SportDropdown: ❌
 - DatePicker: ❌
 - SearchButton: ❌
 - Spread: ❌
-- BetButton: ❌
-- BetHistory: ❌
-- PasswordInput: ❌
-- SportDropdown: ❌
-- Moneyline: ❌
 - Totals: ❌
-- LiveEvent: ❌
+- BetHistory: ❌
 - UsernameInput: ❌
+- Moneyline: ❌
+- BetButton: ❌
+- LiveEvent: ❌
+- PasswordInput: ❌
 Overall: ❌ Failed
 
 ## saharagames (https://m-ke.saharagames.com/en)
@@ -88,16 +88,16 @@ Overall: ❌ Failed
 
 ## sportybet (https://www.sportybet.com/int/sport/football/live_list)
 - UsernameInput: ❌
+- SearchButton: ❌
+- Spread: ❌
+- Totals: ❌
+- BetHistory: ❌
 - PasswordInput: ❌
 - LoginButton: ❌
 - SportDropdown: ❌
 - DatePicker: ❌
 - Moneyline: ❌
-- Spread: ❌
 - BetButton: ❌
-- SearchButton: ❌
-- Totals: ❌
-- BetHistory: ❌
 - LiveEvent: ❌
 Overall: ❌ Failed
 

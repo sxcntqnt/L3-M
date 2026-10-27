@@ -15,37 +15,37 @@
 ---
 
 ## betgr8 (https://lite.betgr8.com/ke/?force=1#/)
+- BetButton: ❌
+- BetHistory: ❌
+- UsernameInput: ❌
 - LoginButton: ❌
+- SportDropdown: ❌
+- Totals: ❌
+- LiveEvent: ❌
+- PasswordInput: ❌
 - DatePicker: ❌
 - SearchButton: ❌
 - Moneyline: ❌
-- BetButton: ❌
-- UsernameInput: ❌
-- PasswordInput: ❌
-- SportDropdown: ❌
 - Spread: ❌
-- Totals: ❌
-- BetHistory: ❌
-- LiveEvent: ❌
 Overall: ❌ Failed
 
 ## betway (https://www.betway.com)
-- Spread: ❌
-- Totals: ❌
-- BetButton: ❌
-- LiveEvent: ❌
-- UsernameInput: ❌
-- LoginButton: ❌
 - SportDropdown: ❌
-- BetHistory: ❌
-- PasswordInput: ❌
 - DatePicker: ❌
 - SearchButton: ❌
+- Totals: ❌
+- BetHistory: ❌
+- UsernameInput: ❌
+- PasswordInput: ❌
 - Moneyline: ❌
+- Spread: ❌
+- BetButton: ❌
+- LiveEvent: ❌
+- LoginButton: ❌
 Overall: ❌ Failed
 
 ## dimbakenya (https://www.dimbakenya.com/)
-- Fetch error: failed to fetch "https://www.dimbakenya.com/": Get "https://www.dimbakenya.com/": dial tcp: lookup www.dimbakenya.com on 127.0.0.100:53: no such host
+- Fetch error: failed to fetch "https://www.dimbakenya.com/": Get "https://www.dimbakenya.com/": dial tcp: lookup www.dimbakenya.com on 127.0.0.53:53: no such host
 Overall: ❌ Failed
 
 ## inbetkenya (https://www.inbetkenya.co.ke/index.php?action=sport&tz=3.0&set_default_tz=1)
@@ -53,18 +53,18 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## ligibet (https://www.ligibet.com)
+- Spread: ❌
+- BetButton: ❌
+- SportDropdown: ❌
+- Totals: ❌
 - BetHistory: ❌
 - LiveEvent: ❌
 - UsernameInput: ❌
 - PasswordInput: ❌
-- SportDropdown: ❌
+- LoginButton: ❌
 - DatePicker: ❌
 - SearchButton: ❌
 - Moneyline: ❌
-- Spread: ❌
-- BetButton: ❌
-- LoginButton: ❌
-- Totals: ❌
 Overall: ❌ Failed
 
 ## parimatch (https://www.parimatch.com)
@@ -72,21 +72,21 @@ Overall: ❌ Failed
 Overall: ❌ Failed
 
 ## saharagames (https://m-ke.saharagames.com/en)
-- Fetch error: failed to fetch "https://m-ke.saharagames.com/en": Get "https://m-ke.saharagames.com/en": dial tcp: lookup m-ke.saharagames.com on 127.0.0.100:53: no such host
+- Fetch error: failed to fetch "https://m-ke.saharagames.com/en": Get "https://m-ke.saharagames.com/en": dial tcp: lookup m-ke.saharagames.com on 127.0.0.53:53: no such host
 Overall: ❌ Failed
 
 ## sportybet (https://www.sportybet.com/int/sport/football/live_list)
-- SearchButton: ❌
-- Spread: ❌
 - Totals: ❌
+- BetButton: ❌
 - LiveEvent: ❌
 - PasswordInput: ❌
-- SportDropdown: ❌
-- DatePicker: ❌
+- LoginButton: ❌
 - Moneyline: ❌
-- BetButton: ❌
+- Spread: ❌
 - BetHistory: ❌
 - UsernameInput: ❌
-- LoginButton: ❌
+- SportDropdown: ❌
+- DatePicker: ❌
+- SearchButton: ❌
 Overall: ❌ Failed
 

@@ -5,19 +5,35 @@
       "url": "https://lite.betgr8.com/ke/?force=1#/",
       "results": [
         {
-          "label": "PasswordInput",
-          "status": "❌"
-        },
-        {
           "label": "LoginButton",
           "status": "❌"
         },
         {
-          "label": "DatePicker",
+          "label": "SearchButton",
           "status": "❌"
         },
         {
-          "label": "SearchButton",
+          "label": "Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "Totals",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory",
+          "status": "❌"
+        },
+        {
+          "label": "PasswordInput",
+          "status": "❌"
+        },
+        {
+          "label": "SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "DatePicker",
           "status": "❌"
         },
         {
@@ -29,27 +45,11 @@
           "status": "❌"
         },
         {
-          "label": "BetHistory",
-          "status": "❌"
-        },
-        {
           "label": "LiveEvent",
           "status": "❌"
         },
         {
           "label": "UsernameInput",
-          "status": "❌"
-        },
-        {
-          "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
-          "label": "Totals",
           "status": "❌"
         }
       ],
@@ -60,6 +60,10 @@
       "url": "https://www.betway.com",
       "results": [
         {
+          "label": "UsernameInput",
+          "status": "❌"
+        },
+        {
           "label": "LoginButton",
           "status": "❌"
         },
@@ -68,7 +72,7 @@
           "status": "❌"
         },
         {
-          "label": "SearchButton",
+          "label": "DatePicker",
           "status": "❌"
         },
         {
@@ -76,11 +80,11 @@
           "status": "❌"
         },
         {
-          "label": "Totals",
+          "label": "Spread",
           "status": "❌"
         },
         {
-          "label": "BetButton",
+          "label": "Totals",
           "status": "❌"
         },
         {
@@ -88,23 +92,19 @@
           "status": "❌"
         },
         {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "UsernameInput",
-          "status": "❌"
-        },
-        {
           "label": "PasswordInput",
           "status": "❌"
         },
         {
-          "label": "DatePicker",
+          "label": "SearchButton",
           "status": "❌"
         },
         {
-          "label": "Spread",
+          "label": "BetButton",
+          "status": "❌"
+        },
+        {
+          "label": "LiveEvent",
           "status": "❌"
         }
       ],
@@ -137,7 +137,15 @@
       "url": "https://www.ligibet.com",
       "results": [
         {
-          "label": "DatePicker",
+          "label": "UsernameInput",
+          "status": "❌"
+        },
+        {
+          "label": "PasswordInput",
+          "status": "❌"
+        },
+        {
+          "label": "LoginButton",
           "status": "❌"
         },
         {
@@ -149,7 +157,23 @@
           "status": "❌"
         },
         {
+          "label": "Totals",
+          "status": "❌"
+        },
+        {
+          "label": "SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "DatePicker",
+          "status": "❌"
+        },
+        {
           "label": "Spread",
+          "status": "❌"
+        },
+        {
+          "label": "BetButton",
           "status": "❌"
         },
         {
@@ -158,30 +182,6 @@
         },
         {
           "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "PasswordInput",
-          "status": "❌"
-        },
-        {
-          "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
-          "label": "Totals",
-          "status": "❌"
-        },
-        {
-          "label": "BetButton",
-          "status": "❌"
-        },
-        {
-          "label": "UsernameInput",
-          "status": "❌"
-        },
-        {
-          "label": "LoginButton",
           "status": "❌"
         }
       ],
@@ -218,7 +218,7 @@
           "status": "❌"
         },
         {
-          "label": "DatePicker",
+          "label": "SearchButton",
           "status": "❌"
         },
         {
@@ -231,18 +231,6 @@
         },
         {
           "label": "BetButton",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
-          "status": "❌"
-        },
-        {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
-          "label": "BetHistory",
           "status": "❌"
         },
         {
@@ -259,6 +247,18 @@
         },
         {
           "label": "LoginButton",
+          "status": "❌"
+        },
+        {
+          "label": "DatePicker",
+          "status": "❌"
+        },
+        {
+          "label": "Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory",
           "status": "❌"
         }
       ],
@@ -271,19 +271,35 @@
       "url": "https://lite.betgr8.com/ke/?force=1#/",
       "results": [
         {
-          "label": "PasswordInput",
-          "status": "❌"
-        },
-        {
           "label": "LoginButton",
           "status": "❌"
         },
         {
-          "label": "DatePicker",
+          "label": "SearchButton",
           "status": "❌"
         },
         {
-          "label": "SearchButton",
+          "label": "Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "Totals",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory",
+          "status": "❌"
+        },
+        {
+          "label": "PasswordInput",
+          "status": "❌"
+        },
+        {
+          "label": "SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "DatePicker",
           "status": "❌"
         },
         {
@@ -295,27 +311,11 @@
           "status": "❌"
         },
         {
-          "label": "BetHistory",
-          "status": "❌"
-        },
-        {
           "label": "LiveEvent",
           "status": "❌"
         },
         {
           "label": "UsernameInput",
-          "status": "❌"
-        },
-        {
-          "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
-          "label": "Totals",
           "status": "❌"
         }
       ],
@@ -326,6 +326,10 @@
       "url": "https://www.betway.com",
       "results": [
         {
+          "label": "UsernameInput",
+          "status": "❌"
+        },
+        {
           "label": "LoginButton",
           "status": "❌"
         },
@@ -334,7 +338,7 @@
           "status": "❌"
         },
         {
-          "label": "SearchButton",
+          "label": "DatePicker",
           "status": "❌"
         },
         {
@@ -342,11 +346,11 @@
           "status": "❌"
         },
         {
-          "label": "Totals",
+          "label": "Spread",
           "status": "❌"
         },
         {
-          "label": "BetButton",
+          "label": "Totals",
           "status": "❌"
         },
         {
@@ -354,23 +358,19 @@
           "status": "❌"
         },
         {
-          "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "UsernameInput",
-          "status": "❌"
-        },
-        {
           "label": "PasswordInput",
           "status": "❌"
         },
         {
-          "label": "DatePicker",
+          "label": "SearchButton",
           "status": "❌"
         },
         {
-          "label": "Spread",
+          "label": "BetButton",
+          "status": "❌"
+        },
+        {
+          "label": "LiveEvent",
           "status": "❌"
         }
       ],
@@ -403,7 +403,15 @@
       "url": "https://www.ligibet.com",
       "results": [
         {
-          "label": "DatePicker",
+          "label": "UsernameInput",
+          "status": "❌"
+        },
+        {
+          "label": "PasswordInput",
+          "status": "❌"
+        },
+        {
+          "label": "LoginButton",
           "status": "❌"
         },
         {
@@ -415,7 +423,23 @@
           "status": "❌"
         },
         {
+          "label": "Totals",
+          "status": "❌"
+        },
+        {
+          "label": "SportDropdown",
+          "status": "❌"
+        },
+        {
+          "label": "DatePicker",
+          "status": "❌"
+        },
+        {
           "label": "Spread",
+          "status": "❌"
+        },
+        {
+          "label": "BetButton",
           "status": "❌"
         },
         {
@@ -424,30 +448,6 @@
         },
         {
           "label": "LiveEvent",
-          "status": "❌"
-        },
-        {
-          "label": "PasswordInput",
-          "status": "❌"
-        },
-        {
-          "label": "SportDropdown",
-          "status": "❌"
-        },
-        {
-          "label": "Totals",
-          "status": "❌"
-        },
-        {
-          "label": "BetButton",
-          "status": "❌"
-        },
-        {
-          "label": "UsernameInput",
-          "status": "❌"
-        },
-        {
-          "label": "LoginButton",
           "status": "❌"
         }
       ],
@@ -484,7 +484,7 @@
           "status": "❌"
         },
         {
-          "label": "DatePicker",
+          "label": "SearchButton",
           "status": "❌"
         },
         {
@@ -497,18 +497,6 @@
         },
         {
           "label": "BetButton",
-          "status": "❌"
-        },
-        {
-          "label": "SearchButton",
-          "status": "❌"
-        },
-        {
-          "label": "Moneyline",
-          "status": "❌"
-        },
-        {
-          "label": "BetHistory",
           "status": "❌"
         },
         {
@@ -525,6 +513,18 @@
         },
         {
           "label": "LoginButton",
+          "status": "❌"
+        },
+        {
+          "label": "DatePicker",
+          "status": "❌"
+        },
+        {
+          "label": "Moneyline",
+          "status": "❌"
+        },
+        {
+          "label": "BetHistory",
           "status": "❌"
         }
       ],
